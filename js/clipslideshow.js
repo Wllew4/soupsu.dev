@@ -23,11 +23,11 @@ function changeClip (i) {
     if(current < 0){
         current = clip.length - 1;
     }
-    document.getElementById("clipplayer").setAttribute("src", "https://clips.twitch.tv/embed?parent=" + window.location.hostname + "&autoplay=false&muted=false&clip=" + clip[current]);
+    document.getElementById("clipplayer").setAttribute("src", "https://clips.twitch.tv/embed?parent=soupsu.live&autoplay=false&muted=false&clip=" + clip[current]);
 }
 
 function setClip (i){
-    document.getElementById("clipplayer").setAttribute("src", "https://clips.twitch.tv/embed?parent=" + window.location.hostname + "&autoplay=false&muted=false&clip=" + clip[i]);
+    document.getElementById("clipplayer").setAttribute("src", "https://clips.twitch.tv/embed?parent=soupsu.live&autoplay=false&muted=false&clip=" + clip[i]);
 }
 
-document.getElementById("clipplayer").setAttribute("src", "https://clips.twitch.tv/embed?parent=" + window.location.hostname + "&autoplay=false&muted=false&clip=DifficultCleanPonyArgieB8");
+document.getElementById("clipplayer").setAttribute("src", "https://clips.twitch.tv/embed?parent=soupsu.live&autoplay=false&muted=false&clip=DifficultCleanPonyArgieB8");
