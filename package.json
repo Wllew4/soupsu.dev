@@ -11,5 +11,8 @@
   "dependencies": {
     "extra-life": "^1.0.5",
     "showdown": "^1.9.1"
+  },
+  "engines": {
+    "node": "14.2.0"
   }
 }
