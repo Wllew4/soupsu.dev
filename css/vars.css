@@ -1,0 +1,24 @@
+:root {
+    --twitchPurple: #9146FF;
+    --twitchJiggle: #FAB4FF;
+    --twitchWipeout: #00C8AF;
+    
+    --ytRed: #FF0000;
+    --ytAlmostBlack: #282828;
+
+    --twitterBlack: #14171A;
+    --twitterBlue: #1DA1F2;
+
+    --discordBlurple: #7289DA;
+    --discordNotQuiteBlack: #23272A;
+
+    --itchRed: #fa5c5c;
+
+    --volumeTeal: rgb(77, 192, 192);
+
+    --bchBlue: #16498a;
+
+    --el1: rgb(121, 161, 39);
+    --el2: rgb(255, 160, 197);
+    --el3: rgb(120, 255, 154);
+}

@@ -1,0 +1,52 @@
+/*  Links   */
+.link {
+    text-decoration: none;
+    transition: all ease-in-out 0.5s;
+    border-bottom: 4px solid transparent;
+}
+
+.link:hover {
+    color: black;
+    border-color: black;
+    cursor: pointer;
+}
+
+
+/*  Alignment   */
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+
+/*  Styles   */
+.latestvidtext {
+    color: white;
+    font-family: 'Recursive';
+    margin-left: 3vw;
+}
+
+.Header {
+    color: white;
+    font-family: "Recursive";
+    font-size: 80px;
+}
+
+.liveSubtitle {
+    color: white;
+    font-family: 'Recursive';
+    font-size: 20px;
+}
+
+.elSubtitle {
+    color: white;
+    font-family: 'Recursive';
+    font-size: 25px;
+}

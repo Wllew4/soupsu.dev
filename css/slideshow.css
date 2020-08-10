@@ -1,0 +1,24 @@
+.slideshow-container {
+    position: relative;
+}
+
+.prev, .next {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 10vw;
+    border-radius: 10px 10px 10px 10px;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.next {
+    position: absolute;
+    right: 0;
+}
