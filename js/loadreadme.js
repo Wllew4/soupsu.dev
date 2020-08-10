@@ -20,9 +20,11 @@ $.ajax({
         howItWorks = converter.makeHtml(howItWorks);
 
         document.getElementById("intro").innerHTML = intro;
-        document.getElementById("gettingStarted").innerHTML = gettingStarted;
-        document.getElementById("gettingRunning").innerHTML = gettingRunning;
-        document.getElementById("howItWorks").innerHTML = howItWorks;
+        if(window.location.pathname == '/projects/volume-controller'){
+            document.getElementById("gettingStarted").innerHTML = gettingStarted;
+            document.getElementById("gettingRunning").innerHTML = gettingRunning;
+            document.getElementById("howItWorks").innerHTML = howItWorks;
+        }
 
         var links = document.getElementsByTagName("a");
         for(var i = 0; i < links.length; i++){
