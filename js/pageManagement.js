@@ -44,6 +44,9 @@ window.onpopstate = function (){
 }
 
 window.onload = function () {
+    if(window.location.protocol != "https:"){
+        window.location.replace("https://soupsu.live" + window.location.pathname);
+    }
 
     //Load content of initial page
     var path = window.location.pathname.substring(1);
