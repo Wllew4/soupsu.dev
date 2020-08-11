@@ -29,6 +29,9 @@ http.createServer(function(req, res){
         case '.wav':
             contentType = 'audio/wav';
             break;
+        case '.txt':
+            contentType = 'text/plain';
+            break;
         case '':
             filePath = 'index.html';
             break;
