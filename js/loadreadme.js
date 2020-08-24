@@ -18,12 +18,14 @@ $.ajax({
         intro = converter.makeHtml(intro);
         gettingStarted = converter.makeHtml(gettingStarted);
         gettingRunning = converter.makeHtml(gettingRunning);
+        plannedFeatures = converter.makeHtml(plannedFeatures);
         howItWorks = converter.makeHtml(howItWorks);
 
         document.getElementById("intro").innerHTML = intro;
         if(window.location.pathname == '/projects/volume-controller'){
             document.getElementById("gettingStarted").innerHTML = gettingStarted;
             document.getElementById("gettingRunning").innerHTML = gettingRunning;
+            document.getElementById("plannedFeatures").innerHTML = plannedFeatures;
             document.getElementById("howItWorks").innerHTML = howItWorks;
         }
 
