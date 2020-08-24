@@ -10,7 +10,8 @@ $.ajax({
 
         var intro = readme.substring(readme.indexOf("What is it?") + 12, readme.indexOf("### Getting Started"));
         var gettingStarted = readme.substring(readme.indexOf("Getting Started") + 16, readme.indexOf("### Getting it Running"));
-        var gettingRunning = readme.substring(readme.indexOf("Getting it Running") + 19, readme.indexOf("### How does it work?"));
+        var gettingRunning = readme.substring(readme.indexOf("Getting it Running") + 19, readme.indexOf("### Planned Features"));
+        var plannedFeatures = readme.substring(readme.indexOf("Planned Features") + 17, readme.indexOf("### How does it work?"));
         var howItWorks = readme.substring(readme.indexOf("How does it work?") + 18);
         
 
