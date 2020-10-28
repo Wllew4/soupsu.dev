@@ -5,7 +5,7 @@ const path = require('path');
 http.createServer(function(req, res){
 
     // //Set paths
-    var filePath = '.' + req.url;
+    var filePath = './src' + req.url;
     
     //Correct file types
     var extname = path.extname(filePath);
@@ -33,14 +33,15 @@ http.createServer(function(req, res){
             contentType = 'text/plain';
             break;
         case '':
-            filePath = 'container.html';
+            filePath = 'src/container.html';
             break;
     }
 
     //Load files here
     fs.readFile(filePath, function(err, dat){
         //404
-        if(err || filePath == './index.js'){
+        console.log(filePath);
+        if(err){
             res.end();
         }
         //Path contents
