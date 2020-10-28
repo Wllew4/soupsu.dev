@@ -33,14 +33,14 @@ http.createServer(function(req, res){
             contentType = 'text/plain';
             break;
         case '':
-            filePath = 'index.html';
+            filePath = 'container.html';
             break;
     }
 
     //Load files here
     fs.readFile(filePath, function(err, dat){
         //404
-        if(err){
+        if(err || filePath == './index.js'){
             res.end();
         }
         //Path contents

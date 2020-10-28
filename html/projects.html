@@ -1,22 +1,33 @@
-<script src="/node_modules/showdown/dist/showdown.js"></script>
-<script src="/js/loadreadme.js"></script>
-
-<div class="pageContent">
-    <div class="Container left">
-        <div class="bg-left" style="background: var(--volumeTeal);"></div>
-        <div class="blockContent">
-            <a class="Header link" onclick="updateBody('projects/volume-controller')">VALORANT Volume Controller</a>
-            <p id="intro" class="elSubtitle"></p>
-        </div>
+<link rel="stylesheet" type="text/css" href="/css/projects/projects_layout.css">
+<div class="centered bg2">
+    <div id="navbarbar">
+        <ul>
+            <li class="navbtn navbar" onclick="transitionTo(home)"><a>Home</a></li>
+            <li class="navbtn navbar" onclick="transitionTo(charity)"><a>Charity</a></li>
+            <li id="active" class="navbar"><a>Projects</a></li>
+            <div id="navsocials">
+                <a class="clickable fadeOnHover" href="https://twitch.tv/soupsu" target="_blank">
+                    <img src="/img/socials/twitch.png" draggable="false" class="socials"></img></a>
+                <a class="clickable fadeOnHover" href="https://youtube.com/soupsepicgames" target="_blank">
+                    <img src="/img/socials/youtube.png" draggable="false" class="socials" ></img></a>
+                <a class="clickable fadeOnHover" href="https://twitter.com/soupsu_" target="_blank">
+                    <img src="/img/socials/twitter.png" draggable="false" class="socials"></img></a>
+                <a class="clickable fadeOnHover" href="https://discord.gg/8sm2qnh" target="_blank">
+                    <img src="/img/socials/discord.png" draggable="false" class="socials"></img></a>
+                <a class="clickable fadeOnHover" href="https://github.com/Wllew4" target="_blank">
+                    <img src="/img/socials/github.png" draggable="false" class="socials"></img></a>
+                <a class="clickable fadeOnHover" href="mailto:soupsepicgamesbusiness@gmail.com" target="_blank">
+                    <img src="/img/socials/email.png" draggable="false" class="socials"></img></a>
+            </div>
+        </ul>
     </div>
 
-    <div class="Container right">
-        <div class="bg-right" style="background: var(--itchRed);"></div>
-        <div class="blockContent">
-            <a class="Header link" onclick="updateBody('projects/old-games')">Old Games</a>
-            <p class="elSubtitle">
-                Older, small game projects, mostly made for game jams.
-            </p>
-        </div>
+    <div id="header">
+        <img draggable="false" src="/img/projects.png">
+    </div>
+    <div class="projects">
+        <iframe frameborder="0" src="https://itch.io/embed/665702?bg_color=222222&amp;fg_color=eeeeee&amp;border_color=363636" width="60%" height="167"><a href="https://wllew4.itch.io/scaler">Scaler* by Wllew4</a></iframe>
+        <br>
+        <iframe frameborder="0" src="https://itch.io/embed/620299?bg_color=222222&amp;fg_color=eeeeee&amp;border_color=363636" width="60%" height="167"><a href="https://wllew4.itch.io/the-last-plant">[LD46] The Last Plant by Wllew4</a></iframe>
     </div>
 </div>

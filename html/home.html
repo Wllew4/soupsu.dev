@@ -1,50 +1,35 @@
-<div class="pageContent">
-    <div class="Container centered">
-        <div class="bg-left" style="background: var(--ytRed);"></div>
-        <div class="blockContent">
-            <table style="margin: auto;">
-                <tr>
-                    <th>
-                        <script src="/js/embedlatestvid.js"></script>
-                        <iframe class="ytPlayer" style="display: inline;" id="latestVid" height="56.25%" width="100%" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </th>
-                    <th>
-                        <p class="latestvidtext" style="font-size: 6vw;">Watch<br><span style="font-size: 5vw;">the</span><br>Latest Video</p>
-                    </th>
-                </tr>
-            </table>
-        </div>
-    </div>
+<!DOCTYPE html>
 
-    <div class="Container">
-        <div class="bg-right" style="background: var(--ytAlmostBlack);"></div>
-        <div class="blockContent right">
-            <a class="bigBtn" style="color: white; background: var(--ytRed);" target="_blank" href="https://www.youtube.com/channel/UCvrwx52Pg4MN6SETlFKb6kQ?sub_confirmation=1">
-                Subscribe</a>
+<link rel="stylesheet" type="text/css" href="/css/home/home_layout.css">
+<link rel="stylesheet" type="text/css" href="/css/newstuff.css">
+<div class="centered bg">
+    <span class="left-side side">
+        <img src="/img/me.png" draggable="false"></img>
+    </span>
+    <span class="right-side side">
+        <div>
+            <a class="clickable fadeOnHover" href="https://twitch.tv/soupsu" target="_blank">
+                <img src="/img/socials/twitch.png" draggable="false" class="socials"></img></a>
+            <a class="clickable fadeOnHover" href="https://youtube.com/soupsepicgames" target="_blank">
+                <img src="/img/socials/youtube.png" draggable="false" class="socials" ></img></a>
+            <a class="clickable fadeOnHover" href="https://twitter.com/soupsu_" target="_blank">
+                <img src="/img/socials/twitter.png" draggable="false" class="socials"></img></a>
+            <a class="clickable fadeOnHover" href="https://discord.gg/8sm2qnh" target="_blank">
+                <img src="/img/socials/discord.png" draggable="false" class="socials"></img></a>
+            <a class="clickable fadeOnHover" href="https://github.com/Wllew4" target="_blank">
+                <img src="/img/socials/github.png" draggable="false" class="socials"></img></a>
+            <a class="clickable fadeOnHover" href="mailto:soupsepicgamesbusiness@gmail.com" target="_blank">
+                <img src="/img/socials/email.png" draggable="false" class="socials"></img></a>
+            <!-- <a onclick=""> -->
+                <button onclick="transitionTo(charity)" class="navbtn homebtn clickable fadeOnHover transitionFix">
+                    Charity
+                </button>
+            <!-- </a> -->
+            <!-- <a onclick="changeUrl(projects)"> -->
+                <button onclick="transitionTo(projects)" class="navbtn homebtn clickable fadeOnHover transitionFix">
+                    Projects
+                </button>
+            <!-- </a> -->
         </div>
-    </div>
-
-    <div class="Container">
-        <div class="bg-left" style="background: var(--twitchWipeout);"></div>
-        <div class="blockContent left">
-            <a class="bigBtn" style="color: white; background: var(--twitchPurple);" target="_blank" href="https://twitch.tv/soupsu">
-                Twitch</a>
-        </div>
-    </div>
-
-    <div class="Container">
-        <div class="bg-right" style="background: var(--twitterBlack);"></div>
-        <div class="blockContent right">
-            <a class="bigBtn" style="color: white; background: var(--twitterBlue);" target="_blank" href="https://twitter.com/soupsu_">
-                Twitter</a>
-        </div>
-    </div>
-
-    <div class="Container">
-        <div class="bg-left" style="background: var(--discordNotQuiteBlack);"></div>
-        <div class="blockContent left">
-            <a class="bigBtn" style="color: white; background: var(--discordBlurple);" target="_blank" href="https://discord.gg/BaJ4r9e">
-                Discord</a>
-        </div>
-    </div>
+    </span>
 </div>

@@ -1,42 +1,63 @@
-<div class="pageContent">
-    <div class="Container left">
-        <div class="bg-left" style="background: var(--el1);"></div>
-        <div class="blockContent">
-            <a class="Header link" onclick="updateBody('charity/el2020')">Extra Life 2020 - Upcoming</a>
-            <p class="elSubtitle">
-                Upcoming November 2020<br><br>
-                Extra Life is a challenge where you livestream for 24 hours to raise money for your local Children Miracle Network hospital.
-            </p>
+<script src="/js/charityEvents.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/charity/charity_layout.css">
+
+<template>
+    <div class="event">
+        
+        <div class="text">
+            <a target="_blank" id="title" class="title transitionFix"></a><br>
+            <span class="subtitle">
+                November 14th, 2020<br>
+                Benefitting <a target="_blank" class="beneficiary"></a><br>
+            </span>
         </div>
+    
+        <div class="donobutt">
+            <a>
+                <button class="clickable donobutton transitionFix">
+                    Donate
+                </button>
+            </a>
+        </div>
+        
     </div>
-    <div class="Container right">
-        <div class="bg-right" style="background: var(--el2);"></div>
-        <div class="blockContent">
-            <a class="Header link" onclick="updateBody('charity/el2019')">Extra Life 2019</a>
-            <p class="elSubtitle">
-                November 2, 2019<br>
-                Raised $1,169.10 for Boston Children's Hospital
-            </p>
-        </div>
+</template>
+
+<div class="centered bg2">
+    <div id="navbarbar">
+        <ul>
+            <li class="navbtn navbar" onclick="transitionTo(home)"><a>Home</a></li>
+            <li id="active" class="navbar"><a>Charity</a></li>
+            <li class="navbtn navbar" onclick="transitionTo(projects)"><a>Projects</a></li>
+            <div id="navsocials">
+                <a class="clickable fadeOnHover" href="https://twitch.tv/soupsu" target="_blank">
+                    <img src="/img/socials/twitch.png" draggable="false" class="socials"></img></a>
+                <a class="clickable fadeOnHover" href="https://youtube.com/soupsepicgames" target="_blank">
+                    <img src="/img/socials/youtube.png" draggable="false" class="socials" ></img></a>
+                <a class="clickable fadeOnHover" href="https://twitter.com/soupsu_" target="_blank">
+                    <img src="/img/socials/twitter.png" draggable="false" class="socials"></img></a>
+                <a class="clickable fadeOnHover" href="https://discord.gg/8sm2qnh" target="_blank">
+                    <img src="/img/socials/discord.png" draggable="false" class="socials"></img></a>
+                <a class="clickable fadeOnHover" href="https://github.com/Wllew4" target="_blank">
+                    <img src="/img/socials/github.png" draggable="false" class="socials"></img></a>
+                <a class="clickable fadeOnHover" href="mailto:soupsepicgamesbusiness@gmail.com" target="_blank">
+                    <img src="/img/socials/email.png" draggable="false" class="socials"></img></a>
+            </div>
+        </ul>
     </div>
-    <div class="Container left">
-        <div class="bg-left" style="background: var(--el3);"></div>
-        <div class="blockContent">
-            <a class="Header link" onclick="updateBody('charity/el2018')">Extra Life 2018</a>
-            <p class="elSubtitle">
-                November 11, 2018<br>
-                Raised $200 for Boston Children's Hospital
-            </p>
-        </div>
+
+
+    <div id="header">
+        <img draggable="false" src="/img/charity.png">
     </div>
-    <div class="Container right">
-        <div class="bg-right" style="background: var(--el2);"></div>
-        <div class="blockContent">
-            <a class="Header link" onclick="updateBody('charity/el2017')">Extra Life 2017</a>
-            <p class="elSubtitle">
-                November 10, 2017<br>
-                Raised $130 for Boston Children's Hospital
-            </p>
+    
+    <div id="events">
+        <div class="eventSection">Upcoming Events:</div>
+        <div id="upcoming">
+            
         </div>
+        <div class="eventSection">Previous Events:</div>
+        <div id="previous"></div>
+    
     </div>
 </div>
