@@ -1,0 +1,60 @@
+<div id="total">
+    <span id="left"></span>
+    <span id="right"></span>
+    <div id="progress"></div>
+</div>
+
+<script src="/html/stream/dist/extra-life.js"></script>
+<script>
+
+setInterval(x, 3000);
+    
+async function x () {
+    var data = await extraLife.getParticipant(402863);
+
+    var current = data.sumDonations;
+    var goal = data.fundraisingGoal;
+
+    document.getElementById("progress").style.width = (current * 100 / goal) + "vw";
+    document.getElementById("left").innerHTML = "$" + current;
+    document.getElementById("right").innerHTML = "$" + goal;
+}
+
+x();
+
+</script>
+
+<style>
+    body {
+        margin: 0;
+    }
+    #total {
+        background-color: aquamarine;
+        width: 100vw;
+        height: 50px;
+    }
+    span {
+        margin: 0;
+        font-size: 40px;
+        color: white;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        font-family: Roboto2;
+    }
+    #left {
+        padding-left: 1vw;
+        float: left;
+    }
+    #right {
+        padding-right: 1vw;
+        float: right;
+    }
+    #progress {
+        background-color: green;
+        height: 50px;
+    }
+
+    @font-face {
+        font-family: Roboto2;
+        src: url("/html/stream/RobotoCondensed-Bold.ttf");
+    }
+</style>

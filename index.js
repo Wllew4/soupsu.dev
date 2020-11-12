@@ -40,7 +40,6 @@ http.createServer(function(req, res){
     //Load files here
     fs.readFile(filePath, function(err, dat){
         //404
-        console.log(filePath);
         if(err){
             res.end();
         }

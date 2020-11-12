@@ -52,8 +52,10 @@ function changeUrl (page){
 
 home = new Page('home.html', '', 'Home');
 charity = new Page("charity.html", "charity", "Charity");
-    el2020 = new Redirect('charity/el2020', "https://www.extra-life.org/participant/Soups-2020");
+    new Redirect('el2020', "https://www.extra-life.org/participant/Soups-2020");
 projects = new Page("projects.html", "projects", "Projects");
+new Page("stream/countdown.html", "cd", "Countdown");
+new Page("stream/progress.html", "pb", "Progress Bar");
 
 window.onpopstate = (event) => {
     updateBody();
