@@ -2,6 +2,11 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
+const { initClient } = require("./bot_twitch/ttv_client");
+
+initClient();
+
+
 http.createServer(function(req, res){
 
     // //Set paths

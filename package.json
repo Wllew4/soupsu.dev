@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "extra-life": "^1.0.5"
+    "extra-life": "^1.0.5",
+    "node-ttv": "^1.0.4",
+    "tmi.js": "^1.5.0"
   },
   "devDependencies": {},
   "scripts": {
