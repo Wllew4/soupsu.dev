@@ -1,9 +1,14 @@
 const {socials} = require("../ttv_responses/socialsResponses");
+const {extraTimers} = require("../ttv_responses/extraTimers");
 
 var messages = [];
 
 for(i in socials){
     messages.push(socials[i]);
+}
+
+for(i in extraTimers){
+    messages.push(extraTimers[i]);
 }
 
 global.messageCounter = 0;
