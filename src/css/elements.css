@@ -9,10 +9,3 @@
 .fadeOnHover:hover {
     filter: brightness(0.75);
 }
-
-.socials {
-    vertical-align: top;
-    margin: 0.5vw;
-    width: 6vw;
-    padding: 0;
-}

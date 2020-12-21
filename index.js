@@ -1,12 +1,20 @@
+//  deps
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
+//  chat bot
 const { initClient } = require("./bot_twitch/ttv_client");
-
 initClient();
 
 
+//  Website
+
+//  Build HTML
+const { run } = require("./buildhtml");
+run();
+
+//  Run server
 http.createServer(function(req, res){
 
     // //Set paths
@@ -30,6 +38,9 @@ http.createServer(function(req, res){
             break;      
         case '.jpg':
             contentType = 'image/jpg';
+            break;
+        case '.svg':
+            contentType = 'image/svg+xml';
             break;
         case '.wav':
             contentType = 'audio/wav';

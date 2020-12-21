@@ -5,6 +5,7 @@ Twitch.init(refresh_token, client_id, secret);
 const {socials} = require("../ttv_responses/socialsResponses");
 const {commands} = require("./commands_TTV");
 
+var messageCounter;
 
 exports.messageHandler = (target, context, msg, self) => {
     if (self) { return; } // Ignore messages from the bot

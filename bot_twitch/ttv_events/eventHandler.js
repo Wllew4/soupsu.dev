@@ -19,6 +19,7 @@ function getTier (method) {
 }
 
 var cachedFollower;
+var newFollows = 0;
 
 setInterval(() => {
     var options = {
@@ -30,7 +31,12 @@ setInterval(() => {
         if(recentFollower != cachedFollower){
             var res = eventResponses.follow;
             res = res.replace("<user>", recentFollower);
-            client.say("#soupsu", res);
+            if(newFollows == 1){
+                client.say("#soupsu", res);
+            }
+            else {
+                newFollows++;
+            }
             cachedFollower = recentFollower;
         }
     });

@@ -17,15 +17,27 @@ var rtime;
 var timeout = false;
 var delta = 150;
 
+var fixedTransitions = document.getElementsByClassName("transitionFix");
+
 window.onresize = () => {
-    $('.transitionFix').get(0).style.setProperty('transition-duration', '0s');
-    $('.transitionFix').get(1).style.setProperty('transition-duration', '0s');
+    
+    for(var i = 0; i < fixedTransitions.length; i++){
+        fixedTransitions[i].style['transition-duration'] = '0s';
+    }
 
     rtime = new Date();
     if (timeout === false) {
         timeout = true;
         setTimeout(resizeend, delta);
     }
+
+    // let footer = document.getElementsByClassName('foot')[0];
+    // if(window.innerWidth <= 767){
+    //     footer.classList.remove("footer");
+    // }
+    // else {
+    //     footer.classList.add("footer");
+    // }
 }
 
 function resizeend() {
@@ -33,7 +45,8 @@ function resizeend() {
         setTimeout(resizeend, delta);
     } else {
         timeout = false;
-        $('.transitionFix').get(0).style.setProperty('transition-duration', '0.4s');
-        $('.transitionFix').get(1).style.setProperty('transition-duration', '0.4s');
+        for(var i =0; i < fixedTransitions.length; i++){
+            fixedTransitions[i].style['transition-duration'] = '0.4s';
+        }
     }               
 }

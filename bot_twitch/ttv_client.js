@@ -5,8 +5,6 @@ const {connectionHandler} = require("../util/connectionHandler");
 const {eventHandler} = require("./ttv_events/eventHandler");
 const {messageHandler} = require("./ttv_messages/messageHandler");
 
-const timers = require("./ttv_timers/timers");
-
 exports.initClient = () => {
     //  Define configuration options
     const options = {
