@@ -1,3 +1,15 @@
+exports.AURA = (requrl) => {
+    if(requrl == '/gamer.html'){
+        addPlayer();
+    }
+    else if(requrl == '/assignRoles'){
+        assignRoles();
+    }
+    else if(requrl == '/clearPlayers'){
+        clearPlayers();
+    }
+};
+
 const fs = require('fs');
 
 var players = [];
@@ -19,7 +31,7 @@ function getRandom(arr, n) {
     return result;
 }
 
-exports.addPlayer = _ => {
+addPlayer = _ => {
     var newPlayer = {
         id: connections,
         message: ""
@@ -29,7 +41,7 @@ exports.addPlayer = _ => {
     fs.writeFileSync('./src/gamer.json', JSON.stringify(players));
 };
 
-exports.assignRoles = _ => {
+assignRoles = _ => {
     players = JSON.parse(fs.readFileSync('./src/gamer.json', 'utf8'));
 
     roundsRoles = getRandom(roles, players.length);
@@ -40,7 +52,7 @@ exports.assignRoles = _ => {
     fs.writeFileSync('./src/gamer.json', JSON.stringify(players));
 };
 
-exports.clearPlayers = _ => {
+clearPlayers = _ => {
     players = [];
     connections = 0;
 }
