@@ -15,7 +15,7 @@ const fs = require('fs');
 var players = [];
 var connections = 0;
 
-var roles = JSON.parse(fs.readFileSync('./AURoles.json', 'utf8'));
+var roles = JSON.parse(fs.readFileSync('./AURA/AURoles.json', 'utf8'));
 
 function getRandom(arr, n) {
     var result = new Array(n),

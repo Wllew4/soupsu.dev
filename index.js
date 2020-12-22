@@ -18,7 +18,7 @@ run();
 
 
 //  Among Us Roles
-const {AURA} = require('./amongUsRoles.js')
+const {AURA} = require('./AURA/amongUsRoles.js')
 
 //  Run server
 http.createServer(function(req, res){
