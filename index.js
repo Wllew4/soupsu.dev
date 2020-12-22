@@ -12,13 +12,29 @@ initClient();
 
 //  Build HTML
 const { run } = require("./buildhtml");
+const { connect } = require('http2');
+const { connectionHandler } = require('./util/connectionHandler');
 run();
+
+
+//  Among Us Roles
+const {addPlayer, assignRoles, clearPlayers} = require('./amongUsRoles.js')
 
 //  Run server
 http.createServer(function(req, res){
 
     // //Set paths
     var filePath = './src' + req.url;
+
+    if(req.url == '/gamer.html'){
+        addPlayer();
+    }
+    else if(req.url == '/assignRoles'){
+        assignRoles();
+    }
+    else if(req.url == '/clearPlayers'){
+        clearPlayers();
+    }
     
     //Correct file types
     var extname = path.extname(filePath);

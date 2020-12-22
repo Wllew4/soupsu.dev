@@ -1,0 +1,24 @@
+Among Us Role Assigner (AURA)
+<br>
+<a target="_blank" href="assignRoles">Assign Roles</a> | <a target="_blank" href="clearPlayers">Clear Players</a>
+
+<br><br>
+Your Role: <span id="id"></span>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    var id;
+
+    $.getJSON('gamer.json', d => {
+        document.getElementById("id").innerHTML = d[d.length - 1]["id"];
+        id = d[d.length - 1]["id"];
+    });
+
+    setInterval(()=>{
+        $.getJSON('gamer.json', d => {
+            document.getElementById("id").innerHTML = d[id]["message"];
+        });
+    }, 2000);
+</script>
