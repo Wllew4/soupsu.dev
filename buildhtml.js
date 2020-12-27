@@ -13,6 +13,8 @@ exports.run = () => {
 
     buildPage(site["Buttons"], "./src/html/home.html", "");
     fs.appendFileSync("./src/js/pages.js", "home = new Page('home.html', '', 'Home');");
+
+    buildRefs();
 };
 
 function buildPage (elArray, file, parent) {
@@ -90,3 +92,81 @@ function buildSocials (socials, file) {
     }
     fs.appendFileSync(file, "</footer></div>");
 }
+
+function buildRefs () {
+    refs = JSON.parse(fs.readFileSync("./src/html/templates/refs.json"));
+
+    fs.writeFileSync('./src/html/art/ref.html', '');
+    fs.appendFileSync('./src/html/art/ref.html', fs.readFileSync('./src/html/templates/reftemp.html', 'utf8'));
+
+    for (var j in refs){
+        fs.appendFileSync('./src/html/art/ref.html',
+        '<button type="button" class="collapsible fadeOnHover"'
+        + 'style="background-color: '
+        + refs[j]["Colors"][0] + ';');
+        
+
+        var rgb1 = hexToRgb(refs[j]["Colors"][0]);
+        var p1 = ((rgb1.r * 0.2126) + (rgb1.g * 0.7152) + (rgb1.b * 0.0722)) / 255;
+        var l1 = (p1 - 0.5) * -10000;
+
+        if(l1 > 0){
+            fs.appendFileSync('./src/html/art/ref.html', ' color: white; ');
+        }
+        else {
+            fs.appendFileSync('./src/html/art/ref.html', ' color: black; ');
+        }
+
+        fs.appendFileSync('./src/html/art/ref.html',
+        '">'
+        + refs[j]["Name"]
+        + '</button>'
+        + '<div class="content">'
+        + '<img class="side left" src="/img/refs/'
+        + refs[j]["File"]
+        + '"></img>'
+        + '<div class="side right">'
+        );
+
+        for(var k in refs[j]["Colors"]){
+            var rgb = hexToRgb(refs[j]["Colors"][k]);
+            var p = ((rgb.r * 0.2126) + (rgb.g * 0.7152) + (rgb.b * 0.0722)) / 255;
+            var l = (p - 0.5) * -10000;
+
+            fs.appendFileSync('./src/html/art/ref.html', '<div class="color ');
+
+            if(l > 0){
+                fs.appendFileSync('./src/html/art/ref.html', ' whiteText ');
+            }
+
+            fs.appendFileSync('./src/html/art/ref.html', 
+            ' clickable" data-clipboard-text="'
+            + refs[j]["Colors"][k]
+            + '">'
+            + refs[j]["Colors"][k]
+            + '</div>'
+            );
+        }
+
+        fs.appendFileSync('./src/html/art/ref.html',
+            '</div></div>'
+        );
+    }
+
+    buildSocials(site["Socials"], './src/html/art/ref.html');
+}
+
+function hexToRgb(hex) {
+    // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+    var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+    hex = hex.replace(shorthandRegex, function(m, r, g, b) {
+      return r + r + g + g + b + b;
+    });
+  
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16)
+    } : null;
+  }

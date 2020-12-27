@@ -1,0 +1,79 @@
+<script src="/js/clipboard.min.js"></script>
+<style>
+    .whiteText {
+        color: white;
+    }
+    .footer {
+        margin-top: 5vw;
+    }
+    .left {
+        float: left;
+        margin-left: 5%;
+        width: 45%;
+    }
+    .right {
+        margin-right: 5%;
+        margin-top: 0.8vw;
+        width: 45%;
+        float: right;
+    }
+    .color {
+        width: calc(40% - 0.4vw);
+        margin: 3%;
+        font-size: 4vw;
+        text-align: center;
+        display: inline-block;
+        font-family: "ABeeZee";
+        border: black 0.2vw solid;
+    }
+    .collapsible {
+        color: #444;
+        cursor: pointer;
+        padding: 1vw;
+        width: 100vw;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 4vw;
+    }
+    .content {
+        background-color: transparent;
+        max-height: 0;
+        overflow-y: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    .collapsible:after {
+        content: '+';
+        font-size: 4vw;
+        color: #444;
+        float: right;
+        margin: auto;
+    }
+
+    .active:after {
+        content: "-";
+    }
+</style>
+<script>
+    new ClipboardJS('.color');
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+    var colors = document.getElementsByClassName("color");
+    for(var j = 0; j < colors.length; j++){
+        colors[j].style["background-color"] = colors[j].innerHTML;
+    }
+</script>

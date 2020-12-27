@@ -1,12 +1,79 @@
-<div class="refpage">
-
-</div>
-<img class="ref" src="/img/refs/felix.JPG"></img>
+<script src="/js/clipboard.min.js"></script>
 <style>
-    .ref {
-        width: 50vw;
+    .whiteText {
+        color: white;
     }
-    .refpage {
+    .footer {
+        margin-top: 5vw;
+    }
+    .left {
+        float: left;
+        margin-left: 5%;
+        width: 45%;
+    }
+    .right {
+        margin-right: 5%;
+        margin-top: 0.8vw;
+        width: 45%;
+        float: right;
+    }
+    .color {
+        width: calc(40% - 0.4vw);
+        margin: 3%;
+        font-size: 4vw;
+        text-align: center;
+        display: inline-block;
+        font-family: "ABeeZee";
+        border: black 0.2vw solid;
+    }
+    .collapsible {
+        color: #444;
+        cursor: pointer;
+        padding: 1vw;
         width: 100vw;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 4vw;
+    }
+    .content {
+        background-color: transparent;
+        max-height: 0;
+        overflow-y: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    .collapsible:after {
+        content: '+';
+        font-size: 4vw;
+        color: #444;
+        float: right;
+        margin: auto;
+    }
+
+    .active:after {
+        content: "-";
     }
 </style>
+<script>
+    new ClipboardJS('.color');
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+    var colors = document.getElementsByClassName("color");
+    for(var j = 0; j < colors.length; j++){
+        colors[j].style["background-color"] = colors[j].innerHTML;
+    }
+</script><button type="button" class="collapsible fadeOnHover"style="background-color: #00d0ff; color: black; ">Felix</button><div class="content"><img class="side left" src="/img/refs/Felix_ref.png"></img><div class="side right"><div class="color  clickable" data-clipboard-text="#00d0ff">#00d0ff</div><div class="color  whiteText  clickable" data-clipboard-text="#a000ff">#a000ff</div><div class="color  clickable" data-clipboard-text="#00fe5d">#00fe5d</div><div class="color  whiteText  clickable" data-clipboard-text="#0f0e20">#0f0e20</div><div class="color  clickable" data-clipboard-text="#ffffff">#ffffff</div><div class="color  clickable" data-clipboard-text="#f6777e">#f6777e</div></div></div><button type="button" class="collapsible fadeOnHover"style="background-color: #210c54; color: white; ">Sour Belt</button><div class="content"><img class="side left" src="/img/refs/Sour_Belt_ref.png"></img><div class="side right"><div class="color  whiteText  clickable" data-clipboard-text="#210c54">#210c54</div><div class="color  clickable" data-clipboard-text="#c8b6f6">#c8b6f6</div><div class="color  clickable" data-clipboard-text="#71dbf6">#71dbf6</div></div></div><button type="button" class="collapsible fadeOnHover"style="background-color: #41ffe0; color: black; ">Misty</button><div class="content"><img class="side left" src="/img/refs/Misty_ref.png"></img><div class="side right"><div class="color  clickable" data-clipboard-text="#41ffe0">#41ffe0</div><div class="color  clickable" data-clipboard-text="#b8fff3">#b8fff3</div><div class="color  clickable" data-clipboard-text="#d39eff">#d39eff</div><div class="color  whiteText  clickable" data-clipboard-text="#34164c">#34164c</div><div class="color  clickable" data-clipboard-text="#6be3ff">#6be3ff</div></div></div><button type="button" class="collapsible fadeOnHover"style="background-color: #ed6663; color: black; ">Astral</button><div class="content"><img class="side left" src="/img/refs/Astral_ref.png"></img><div class="side right"><div class="color  clickable" data-clipboard-text="#ed6663">#ed6663</div><div class="color  whiteText  clickable" data-clipboard-text="#331c62">#331c62</div><div class="color  whiteText  clickable" data-clipboard-text="#b82c64">#b82c64</div><div class="color  clickable" data-clipboard-text="#f5a371">#f5a371</div><div class="color  clickable" data-clipboard-text="#fed21e">#fed21e</div><div class="color  whiteText  clickable" data-clipboard-text="#b65106">#b65106</div><div class="color  clickable" data-clipboard-text="#fdfefb">#fdfefb</div></div></div><button type="button" class="collapsible fadeOnHover"style="background-color: #dc2959; color: white; ">Steve</button><div class="content"><img class="side left" src="/img/refs/Steve_ref.png"></img><div class="side right"><div class="color  whiteText  clickable" data-clipboard-text="#dc2959">#dc2959</div><div class="color  clickable" data-clipboard-text="#ff6559">#ff6559</div><div class="color  clickable" data-clipboard-text="#ffa980">#ffa980</div><div class="color  clickable" data-clipboard-text="#fbd9a9">#fbd9a9</div><div class="color  clickable" data-clipboard-text="#bff3ea">#bff3ea</div><div class="color  clickable" data-clipboard-text="#f3efe3">#f3efe3</div></div></div></div></span></div></div><div class='footer'><footer class='centered'><a target='_blank' href='https://twitch.tv/soupsu'><img draggable='false' class='fadeOnHover clickable socials transitionFix' alt='Twitch.tv' src='/img/socials/ttv.png'></a><a target='_blank' href='https://youtube.com/soupsepicgames'><img draggable='false' class='fadeOnHover clickable socials transitionFix' alt='YouTube' src='/img/socials/yt.png'></a><a target='_blank' href='https://twitter.com/soupsu_'><img draggable='false' class='fadeOnHover clickable socials transitionFix' alt='Twitter' src='/img/socials/twt.png'></a><a target='_blank' href='https://discord.gg/8sm2qnh'><img draggable='false' class='fadeOnHover clickable socials transitionFix' alt='Discord' src='/img/socials/discord.png'></a><a target='_blank' href='https://github.com/Wllew4'><img draggable='false' class='fadeOnHover clickable socials transitionFix' alt='Github' src='/img/socials/github.png'></a><a target='_blank' href='https://soundcloud.com/soupsu'><img draggable='false' class='fadeOnHover clickable socials transitionFix' alt='SoundCloud' src='/img/socials/soundcloud.png'></a><a target='_blank' href='https://ko-fi.com/soupsu'><img draggable='false' class='fadeOnHover clickable socials transitionFix' alt='Ko-fi' src='/img/socials/kofi.png'></a><a target='_blank' href='mailto:soupsepicgamesbusiness@gmail.com'><img draggable='false' class='fadeOnHover clickable socials transitionFix' alt='Email' src='/img/socials/email.png'></a></footer></div>

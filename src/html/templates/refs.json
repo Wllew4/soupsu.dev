@@ -1,0 +1,59 @@
+[
+    {
+        "Name": "Felix",
+        "File": "Felix_ref.png",
+        "Colors": [
+            "#00d0ff",
+            "#a000ff",
+            "#00fe5d",
+            "#0f0e20",
+            "#ffffff",
+            "#f6777e"
+        ]
+    },
+    {
+        "Name": "Sour Belt",
+        "File": "Sour_Belt_ref.png",
+        "Colors": [
+            "#210c54",
+            "#c8b6f6",
+            "#71dbf6"
+        ]
+    },
+    {
+        "Name": "Misty",
+        "File": "Misty_ref.png",
+        "Colors": [
+            "#41ffe0",
+            "#b8fff3",
+            "#d39eff",
+            "#34164c",
+            "#6be3ff"
+        ]
+    },
+    {
+        "Name": "Astral",
+        "File": "Astral_ref.png",
+        "Colors": [
+            "#ed6663",
+            "#331c62",
+            "#b82c64",
+            "#f5a371",
+            "#fed21e",
+            "#b65106",
+            "#fdfefb"
+        ]
+    },
+    {
+        "Name": "Steve",
+        "File": "Steve_ref.png",
+        "Colors": [
+            "#dc2959",
+            "#ff6559",
+            "#ffa980",
+            "#fbd9a9",
+            "#bff3ea",
+            "#f3efe3"
+        ]
+    }
+]
