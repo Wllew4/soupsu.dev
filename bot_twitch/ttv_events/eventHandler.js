@@ -59,7 +59,7 @@ exports.eventHandler = {
         if(autohost){ return; }
         let res = eventResponses.hosted;
         res = res.replace("<user>", username);
-        res = res.replace("<viewers>", viewers + "viewer" + (viewers != 1 ? "s" : ""));
+        res = res.replace("<viewers>", viewers + " viewer" + (viewers != 1 ? "s" : ""));
         client.say("#soupsu", res);
     },
     subscription: (channel, username, method, message, userstate) => {
