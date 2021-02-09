@@ -32,6 +32,32 @@
         ]
     },
     {
+        "Name": "Cream",
+        "File": "Cream_ref.PNG",
+        "Colors": [
+            "#fbf0e5",
+            "#ca8f71",
+            "#432113",
+            "#673926",
+            "#925440",
+            "#ffffff"
+        ]
+    },
+    {
+        "Name": "Untitled",
+        "File": "untitled_ref.PNG",
+        "Colors": [
+            "#69bcec",
+            "#ce0b61",
+            "#aba1e9",
+            "#ff710a",
+            "#fdf98b",
+            "#e68076",
+            "#7473f4",
+            "#ffffff"
+        ]
+    },
+    {
         "Name": "Astral",
         "File": "Astral_ref.png",
         "Colors": [
