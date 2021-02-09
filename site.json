@@ -39,20 +39,18 @@
             "url": "art",
             "Nav": [
                 {
-                    "Text": "Price Sheet coming soon"
-                },
-                {
-                    "Text": "ToS",
-                    "Link": "https://docs.google.com/document/d/1zoha9Ne4AldaKEzAfSRuMM4_Hd0_6GMFuSoUW8174Jo"
+                    "Text": "My Characters",
+                    "Etc": "ref"
                 },
                 {
                     "Text": "<img alt='Telegram logo' draggable='false' class='inlineimg' src='/img/tg.png'> Channel",
                     "Link": "https://t.me/felixstash"
                 },
                 {
-                    "Text": "My Characters",
-                    "Etc": "ref"
+                    "Text": "ToS",
+                    "Link": "https://docs.google.com/document/d/1zoha9Ne4AldaKEzAfSRuMM4_Hd0_6GMFuSoUW8174Jo"
                 }
+                
             ]
         }
     ],
