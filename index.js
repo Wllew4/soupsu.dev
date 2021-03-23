@@ -4,8 +4,8 @@ const fs = require('fs');
 const path = require('path');
 
 //  chat bot
-const { initClient } = require("./bot_twitch/ttv_client");
-initClient();
+// const { initClient } = require("./bot_twitch/ttv_client");
+// initClient();
 
 
 //  Website
