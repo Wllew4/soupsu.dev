@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#homebg {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/img/home/bg.png"), linear-gradient(45deg, #007d99, #6600aa);
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.me {
+    width: 30%;
+    margin: auto;
+    display: block;
+}
+
+.text {
+    text-align: center;
+    font-size: 1.6vw;
+    font-family: ABeeZee;
+    color: #00bbe6;
+    margin: 0;
+}
+
+.inlineimg {
+    height: 1em;
+    vertical-align: -0.16em;
+}
+
+a {
+    color: inherit;
+}
+
+.socials {
+    margin-top: 1vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: fit-content;
+}
+
+.social {
+    width: 8vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+.fadeOnHover {
+    transition-duration: 0.4s;
+}
+
+.fadeOnHover:hover {
+    filter: brightness(0.75);
+}

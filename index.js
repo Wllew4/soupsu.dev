@@ -3,31 +3,11 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-//  chat bot
-// const { initClient } = require("./bot_twitch/ttv_client");
-// initClient();
-
-
-//  Website
-
-//  Build HTML
-const { run } = require("./buildhtml");
-const { connect } = require('http2');
-const { connectionHandler } = require('./util/connectionHandler');
-run();
-
-
-//  Among Us Roles
-const {AURA} = require('./AURA/amongUsRoles.js')
-
 //  Run server
 http.createServer(function(req, res){
 
     // //Set paths
     var filePath = './src' + req.url;
-
-    //Among Us Roles
-    AURA(req.url);
     
     //Correct file types
     var extname = path.extname(filePath);
@@ -51,6 +31,9 @@ http.createServer(function(req, res){
         case '.svg':
             contentType = 'image/svg+xml';
             break;
+        case '.GIF':
+            contentType = 'image/gif';
+            break;
         case '.wav':
             contentType = 'audio/wav';
             break;
@@ -58,7 +41,7 @@ http.createServer(function(req, res){
             contentType = 'text/plain';
             break;
         case '':
-            filePath = 'src/container.html';
+            filePath = 'src/html/container.html';
             break;
     }
 
