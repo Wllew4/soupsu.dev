@@ -44,6 +44,7 @@ a {
     margin-right: auto;
     display: block;
     width: fit-content;
+    width: -moz-fit-content;
 }
 
 .social {
