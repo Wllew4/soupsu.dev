@@ -1,66 +1,55 @@
 body {
-    margin: 0;
-    height: 100%;
-    width: 100%;
-}
-
-#homebg {
-    overflow-x: hidden;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("/img/home/bg.png"), linear-gradient(45deg, #007d99, #6600aa);
-    background-attachment: fixed;
-    background-position: top;
+    padding: 5%;
+    background-image: url("/img/home/space.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.me {
-    width: 30%;
-    margin: auto;
-    display: block;
+#container {
+    min-width: 20rem;
+    min-height: 100%;
+    flex-direction: column;
 }
 
-.text {
+#main-block {
+    max-width: 100%;
+    padding: 3%;
+    border-radius: 30px;
+    background-color: rgba(36, 0, 51, 0.8);
+}
+
+#icon-info {
+    flex-wrap: wrap;
+}
+
+#pfp {
+    height: 15rem;
+    border-radius: 50%;
+}
+
+#text {
+    width: 30rem;
+    min-width: 20rem;
+    margin-top: -0.6rem;
+    flex: 1 0;
+    color: white;
     text-align: center;
-    font-size: 1.6vw;
-    font-family: ABeeZee;
-    color: #00bbe6;
-    margin: 0;
+    font-family: NotoSansJP;
 }
 
-.inlineimg {
-    height: 1em;
-    vertical-align: -0.16em;
+#socials {
+    justify-content: space-evenly;
+    flex-basis: 100%;
+    padding-top: 4%;
+    flex-wrap: nowrap;
 }
 
-a {
-    color: inherit;
-}
-
-.socials {
-    margin-top: 1vw;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: fit-content;
-    width: -moz-fit-content;
+.social-link {
+    border: 1px solid white;
+    border-radius: 50%;
 }
 
 .social {
-    width: 8vw;
-    margin-left: 1vw;
-    margin-right: 1vw;
-}
-
-.clickable:hover {
-    cursor: pointer;
-}
-
-.fadeOnHover {
-    transition-duration: 0.4s;
-}
-
-.fadeOnHover:hover {
-    filter: brightness(0.75);
+    display: block;
+    height: 6rem;
+    width: 6rem;
 }

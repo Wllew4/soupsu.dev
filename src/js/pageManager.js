@@ -4,10 +4,6 @@ function updateBody () {
             $("body").empty();
             $("body").load("/html/home.html");
             break;
-        case 'janelle':
-            $("body").empty();
-            $("body").load("/html/janelle.html");
-            break;
         default:
             $("body").empty();
             $("body").load("/html/404.html");
