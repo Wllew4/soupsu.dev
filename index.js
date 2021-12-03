@@ -6,6 +6,7 @@ const path = require('path');
 //  Run server
 http.createServer(function(req, res){
 
+    console.log("PORT: " + process.env.PORT);
     // //Set paths
     var filePath = './src' + req.url;
     
@@ -68,4 +69,3 @@ http.createServer(function(req, res){
     });
     
 }).listen(process.env.PORT || 8000);
-console.log(process.env.PORT);
