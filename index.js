@@ -53,9 +53,17 @@ http.createServer(function(req, res){
         }
         //Path contents
         else {
-            res.writeHead(200, {'Content-Type': contentType});
-            res.write(dat, 'utf-8');
-            res.end();
+            if(req.url == '/extralife')
+            {
+                res.writeHead(302, {'Location': 'https://www.extra-life.org/participant/Soupsu-2021'});
+                res.end();
+            }
+            else
+            {
+                res.writeHead(200, {'Content-Type': contentType});
+                res.write(dat, 'utf-8');
+                res.end();
+            }
         }
     });
     
