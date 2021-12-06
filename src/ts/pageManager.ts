@@ -1,5 +1,7 @@
-function updateBody () {
-    switch(getUrl(window.location.pathname, 1)){
+function updateBody ()
+{
+    switch(getUrl(window.location.pathname, 1))
+    {
         case '':
             $("body").empty();
             $("body").load("/html/home.html");
@@ -11,15 +13,18 @@ function updateBody () {
     }
 }
 
-function getUrl(s,i){
-    t = s.split('/');
+function getUrl(s: any, i: any)
+{
+    let t = s.split('/');
     return t[i];
 }
 
-window.onpopstate = (event) => {
+window.onpopstate = (e) =>
+{
     updateBody();
 }
 
-window.onload = () => {
+window.onload = () =>
+{
     updateBody();
 }

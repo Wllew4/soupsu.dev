@@ -1,1 +1,1 @@
-web: node index.js
+web: npm i && bash ./build.sh && node build/server.js
