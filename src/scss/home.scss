@@ -1,12 +1,8 @@
-@use 'mobile';
 @use 'text';
+@use 'mobile';
 @use 'util';
+@use 'spacebg';
 
-body {
-    padding: 5%;
-    background-image: url("/img/home/space.jpg");
-    background-size: cover;
-}
 
 #container {
     min-width: 20rem;
