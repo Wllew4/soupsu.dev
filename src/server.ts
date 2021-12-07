@@ -77,15 +77,15 @@ https.createServer(function(req, res)
             //  Let frontend handle non-file/unknown file requests
             fs.readFile('build/site/html/container.html', function(err, dat)
             {
-                if(err)
+                if(!err)
                 {
-                    console.log('Failed to load container.html!!' + err);
+                    res.writeHead(200, {'Content-Type': contentType});
+                    res.write(dat, 'utf-8');
                     res.end();
                 }
                 else
                 {
-                    res.writeHead(200, {'Content-Type': contentType});
-                    res.write(dat, 'utf-8');
+                    console.log('Failed to load container.html!!' + err);
                     res.end();
                 }
             });
