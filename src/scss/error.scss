@@ -1,37 +1,58 @@
-@use 'mobile';
-@use 'text';
 @use 'util';
+@use 'text';
+@use 'mobile';
 @use 'spacebg';
 
-.l {
+#error
+{
 	position: absolute;
 	height: 100%;
-	width: 80%;
+	width: 60%;
 	float: left;
-}
-p {
+
 	color: white;
 	font-family: 'Noto Sans JP';
-	font-size: 10vh;
 	text-align: center;
-	text-shadow: 4px 4px 5px #000000;
 	-webkit-text-stroke: 1px;
 	-webkit-text-stroke-color: black;
+
+	z-index: 1;
+
+	*
+	{
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	#error-code
+	{
+		text-shadow: 4px 4px 5px #000000;
+		font-size: 10vh;
+	}
+	
+	#error-msg
+	{
+		text-shadow: 2px 2px 5px #000000;
+		font-size: 4vh;
+	}
 }
-.r {
+
+#right
+{
 	display: flex;
 	position: relative;
 	height: 100%;
 	width: 60%;
 	float: right;
 }
-img {
+
+img
+{
 	position: absolute;
 	max-height: 100vh;
 	max-width: 60vw;
 	bottom: 0;
 	right: 0;
-}
-body {
-	padding: 0;
+
+	z-index: 0;
 }

@@ -8,12 +8,18 @@ function updateBody ()
             break;
         default:
             $("body").empty();
-            $("body").load("/html/404.html");
+            $("body").load("/html/error.html",
+				_=>{
+					err404(
+						404,
+						'Unable to locate<br>' + window.location.href
+					)}
+				);
             break;
     }
 }
 
-function getUrl(s: any, i: any)
+function getUrl(s: string, i: number)
 {
     let t = s.split('/');
     return t[i];
