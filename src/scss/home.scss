@@ -1,3 +1,7 @@
+@use 'mobile';
+@use 'text';
+@use 'util';
+
 body {
     padding: 5%;
     background-image: url("/img/home/space.jpg");
