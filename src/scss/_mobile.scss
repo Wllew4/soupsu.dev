@@ -3,9 +3,9 @@
 	and (max-device-width: 480px)
 	and (-webkit-min-device-pixel-ratio: 2)
 	and (orientation: portrait)
-  	{
-    #text {
-        min-width: 100%;
+{
+    #home-info {
+        min-width: 100% !important;
     }
 
     .title {
