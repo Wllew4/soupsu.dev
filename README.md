@@ -17,4 +17,4 @@ I know a lot more now than I used to.
 
 ## Roadmap
 1. June 2022 - Switch from Heroku to Linode (my free Heroku credits are running out; Linode is cheaper and gives me IaaS capabilities as opposed to Heroku, which is PaaS).
-2. August 2022 - Switch from .live to .dev domain (.dev is cheaper; it better represents my profile as a developer).
+2. August 2022 - Switch from .live to .dev domain (.dev is cheaper; it better represents my profile as a developer). 
