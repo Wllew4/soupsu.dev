@@ -1,22 +1,26 @@
-name: Build TypeScript
+name: Build
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, vue ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, vue ]
 
 jobs:
-  build-ts:
+
+  build:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-    - name: Compile Typescript
+    - name: Setup
       uses: actions/setup-node@v2
       with:
         node-version: '16.x'
         cache: 'npm'
     - run: npm ci
+    - name: TypeScript compile
     - run: npx tsc
+    - name: Sass compile
+    - run: npx sass src/scss:build/site/css
