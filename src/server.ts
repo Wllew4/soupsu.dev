@@ -5,12 +5,6 @@ import fs from 'fs'
 const PORT = process.env.PORT || 443
 const app = express()
 
-//	Let front handle misc paths
-app.get('*', (_, res) =>
-{
-	res.sendFile(path.join(__dirname, 'site/html/container.html'))
-})
-
 //	Serve static files
 app.use(express.static('build/site'))
 
@@ -34,6 +28,15 @@ for(let redirect of redirects)
 		res.redirect(302, redirect.redirect)
 	})
 }
+
+/*	Let front handle misc paths
+	THIS HAS TO COME LAST
+	ELSE ALL FILES RETURN CONTAINER.HTML
+*/
+app.get('*', (_, res) =>
+{
+	res.sendFile(path.join(__dirname, 'site/html/container.html'))
+})
 
 app.listen(PORT, () =>
 {
