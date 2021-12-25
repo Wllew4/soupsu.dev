@@ -19,8 +19,8 @@ jobs:
       with:
         node-version: '16.x'
         cache: 'npm'
-    - run: npm ci
+      run: npm ci
     - name: TypeScript compile
-    - run: npx tsc
+      run: npx tsc
     - name: Sass compile
-    - run: npx sass src/scss:build/site/css
+      run: npx sass src/scss:build/site/css
