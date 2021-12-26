@@ -4,11 +4,11 @@ function updateBody ()
     {
         case '':
             $("body").empty();
-            $("body").load("/html/home.html");
+            $("body").load("/pages/home.html");
             break;
         default:
             $("body").empty();
-            $("body").load("/html/error.html",
+            $("body").load("/pages/error.html",
 				_=>{
 					err404(
 						404,

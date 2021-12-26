@@ -35,7 +35,7 @@ for(let redirect of redirects)
 */
 app.get('*', (_, res) =>
 {
-	res.sendFile(path.join(__dirname, 'site/html/container.html'))
+	res.sendFile(path.join(__dirname, 'site/pages/container.html'))
 })
 
 app.listen(PORT, () =>
