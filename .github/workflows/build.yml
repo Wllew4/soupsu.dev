@@ -19,7 +19,7 @@ jobs:
       with:
         node-version: '16.x'
         cache: 'npm'
-    - name: npm install deps
+    - name: yarn install deps
       run: yarn install --frozen-lockfile
     - name: build
-      run: build.sh
+      run: ./build.sh
