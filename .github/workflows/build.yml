@@ -16,5 +16,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: test deploy task
       run: |
-        chmod +x ./scripts/deploy.sh
-        ./scripts/deploy.sh
+        chmod +x ./scripts/build-all.sh
+        ./scripts/build-all.sh --mode=production
