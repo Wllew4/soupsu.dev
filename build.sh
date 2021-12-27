@@ -1,7 +1,7 @@
 rm -rf build
 npx tsc
 mkdir build/site
-mv build/ts build/site/js
+yarn build --mode=development
 npx sass src/scss:build/site/css
 cp -R src/pages build/site/pages
 cp -R src/components build/site/components

@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 function updateBody ()
 {
     switch(getUrl(window.location.pathname, 1))
@@ -9,7 +11,7 @@ function updateBody ()
         default:
             $("body").empty();
             $("body").load("/pages/error.html",
-				_=>{
+				()=>{
 					err404(
 						404,
 						'Unable to locate<br>' + window.location.href
