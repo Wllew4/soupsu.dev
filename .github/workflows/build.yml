@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: test deploy task
-      run: chmod +x ./scripts/deploy.sh && ./scripts/deploy.sh
+      run: chmod -R +x ./scripts/deploy.sh && ./scripts/deploy.sh
