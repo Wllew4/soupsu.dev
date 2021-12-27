@@ -22,4 +22,4 @@ jobs:
     - name: yarn install deps
       run: yarn install --frozen-lockfile
     - name: build
-      run: ./build.sh
+      run: chmod +x ./build.sh && ./build.sh
