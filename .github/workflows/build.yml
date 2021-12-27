@@ -15,4 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: test deploy task
-      run: find ./scripts/ -type f -iname "*.sh" -exec chmod +x {} && ./scripts/deploy.sh
+      run: |
+        chmod +x ./scripts/deploy.sh
+        ./scripts/deploy.sh
