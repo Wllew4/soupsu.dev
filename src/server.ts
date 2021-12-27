@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 443
 const app = express()
 
 //	Serve static files
-app.use(express.static('build/site'))
+app.use(express.static('bin/site'))
 
 //	Redirect handling
 type Redirect =
