@@ -1,15 +1,15 @@
-import $ from 'jquery'
-
 function updateBody ()
 {
     switch(getUrl(window.location.pathname, 1))
     {
         case '':
             $("body").empty();
+			require('../scss/home.scss')
             $("body").load("/pages/home.html");
             break;
         default:
             $("body").empty();
+			require('../scss/error.scss')
             $("body").load("/pages/error.html",
 				()=>{
 					err404(
