@@ -1,15 +1,11 @@
 {
-  "name": "soupsu.live",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "soupsu.dev",
+  "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Wllew4",
   "dependencies": {
     "@types/jquery": "^3.5.11",
     "@types/node": "^17.0.4",
@@ -17,6 +13,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
     "express": "^4.17.2",
+    "file-loader": "^6.2.0",
     "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",
     "sass": "^1.45.1",

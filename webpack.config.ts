@@ -1,7 +1,7 @@
 import path from 'path'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { VueLoaderPlugin } from 'vue-loader'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 module.exports = [
 	{
@@ -11,7 +11,7 @@ module.exports = [
 			rules: [
 				{
 					test: /\.vue$/,
-					use: 'vue-loader',
+					loader: 'vue-loader',
 					exclude: /node_modules/,
 				},
 				{
@@ -23,11 +23,19 @@ module.exports = [
 					}
 				},
 				{
-					test: /\.s[ac]ss$/,
+					test: /\.scss$/,
 					use: [
 						"style-loader",
 						"css-loader",
 						"sass-loader"
+					],
+					exclude: /node_modules/,
+				},
+				{
+					test: /\.css$/,
+					use: [
+						"style-loader",
+						"css-loader"
 					],
 					exclude: /node_modules/,
 				},
@@ -42,6 +50,13 @@ module.exports = [
 						}
 					],
 					exclude: /node_modules/,
+				},
+				{
+					test: /\.svg$/,
+					loader: 'file-loader',
+					options: {
+						name: '[name].[ext]'
+					}
 				}
 			]
 		},
@@ -49,13 +64,14 @@ module.exports = [
 			extensions: ['.ts', '.js', '.vue'],
 		},
 		output: {
-			filename: 'main.js',
+			filename: 'bundle.js',
 			path: path.resolve(__dirname, 'bin/site'),
 		},
 		plugins: [
 			new CleanWebpackPlugin(),
 			new HtmlWebpackPlugin({
-				template: 'src/pages/container.html'
+				template: 'src/pages/container.html',
+				minify: true
 			}),
 			new VueLoaderPlugin()
 		]

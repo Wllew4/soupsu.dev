@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { defineComponent } from "@vue/runtime-core"
+
 	type Social =
 	{
 		url: string;
@@ -9,43 +11,45 @@
 	[
 		{
 			url: 'https://twitch.tv/soupsu',
-			img: '../img/home/socials/twitch.svg'
+			img: 'twitch.svg'
 		},
 		{
 			url: 'https://twitter.com/soupsu_',
-			img: '../img/home/socials/twitter.svg'
+			img: 'twitter.svg'
 		},
 		{
 			url: 'https://youtube.com/soupsepicgames',
-			img: '../img/home/socials/youtube.svg'
+			img: 'youtube.svg'
 		},
 		{
 			url: 'https://discord.gg/BaJ4r9e',
-			img: '../img/home/socials/discord.svg'
+			img: 'discord.svg'
 		},
 		{
 			url: 'https://github.com/Wllew4',
-			img: '../img/home/socials/github.svg'
+			img: 'github.svg'
 		}
 	]
 
-	export default {
+	for (let i = 0; i < l.length; i++)
+	{
+		require('../img/home/socials/' + l[i].img)
+	}
+
+	export default defineComponent({
 		data()
 		{
 			return {
-				hello: 'hi',
 				list: l
 			}
 		}
-	}
+	})
 </script>
 
 <template>
-<div id="socials" class="center-children">
-	woooooooooo
-	<div v-for="link in list" :key="link" class="social-link">
+	<div id="socials" class="center-children">
+	<div v-for="link in list" :key="link.url" class="social-link">
 		<a v-bind:href="link.url" target="_blank">
-			{{hello}}
 		<img v-bind:src="link.img" class="social fadeOnHover" draggable='false'></a>
 	</div>
 </div>

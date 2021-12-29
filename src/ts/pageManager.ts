@@ -1,6 +1,8 @@
 import { err404 } from './error'
-import { createApp } from 'vue'
-const social_links = require('../components/social-links.vue')
+import { createApp, h } from 'vue'
+import social_links from '../components/social-links.vue'
+import home from '../pages/home.html'
+import error from '../pages/error.html'
 
 function updateBody ()
 {
@@ -8,14 +10,15 @@ function updateBody ()
     {
         case '':
 			require('../scss/home.scss')
-			document.getElementsByTagName("body")[0].innerHTML = require("../pages/home.html").default;
-			// document.getElementById("social-links")!.innerHTML = require("../components/social-links.html").default;
+			document.getElementsByTagName("body")[0].innerHTML = home;
 			createApp({ data() { return { age: 18 } } }).mount('.text');
-			createApp(social_links).mount('#social-links');
+			createApp({
+				render: ()=>h(social_links)
+			}).mount('#social-links');
             break;
         default:
 			require('../scss/error.scss');
-			document.getElementsByTagName("body")[0].innerHTML = require("../pages/error.html").default;
+			document.getElementsByTagName("body")[0].innerHTML = error;
 			err404(404, 'Unable to locate<br>' + window.location.href);
             break;
     }

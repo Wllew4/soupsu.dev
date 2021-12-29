@@ -1,12 +1,23 @@
 {
+	// This property is just for building backend
 	"files": [
 		"./src/server.ts"
+	],
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.vue",
 	],
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
-        "outDir": "./bin",
-        "rootDir": "./src",
+		"baseUrl": ".",
+        "outDir": "bin",
+        "rootDir": "src",
+		"paths": {
+			"@/*": [
+			  "src/*"
+			]
+		},
 		"sourceMap": true,
         "strict": true,
         "esModuleInterop": true,

@@ -31,7 +31,7 @@ for(let redirect of redirects)
 
 /*	Let front handle misc paths
 	THIS HAS TO COME LAST
-	ELSE ALL FILES RETURN CONTAINER.HTML
+	ELSE ALL FILES RETURN INDEX.HTML
 */
 app.get('*', (_, res) =>
 {
