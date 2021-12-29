@@ -1,1 +1,1 @@
-web: ./scripts/deploy.sh
+web: chmod +x ./scripts/deploy.sh && ./scripts/deploy.sh
