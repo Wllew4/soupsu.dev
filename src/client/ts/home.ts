@@ -1,12 +1,8 @@
 import { createApp, h } from 'vue'
 
 import home from '../html/home.html'
-import social_links from '../components/social-links.vue'
-
-for(let i = 1; i < 6; i++)
-{
-	require('../img/home/icons/felix' + i + '.webp');
-}
+import Icon from '../components/Icon.vue'
+import SocialLinks from '../components/SocialLinks.vue'
 
 export function loadHome(): void
 {
@@ -14,10 +10,9 @@ export function loadHome(): void
 
 	document.getElementsByTagName('body')[0].innerHTML = home;
 
-	const icon = 'felix' + Math.floor(Math.random() * 5 + 1) + '.webp'
-	createApp({ data() { return {
-		icon: icon
-	}}}).mount('#icon')
+	createApp({
+		render: ()=>h(Icon)
+	}).mount('#icon')
 	
 	const birthday: Date = new Date('02/03/2003')
 	createApp({ data() { return {
@@ -25,6 +20,6 @@ export function loadHome(): void
 	}}}).mount('.text');
 	
 	createApp({
-		render: ()=>h(social_links)
+		render: ()=>h(SocialLinks)
 	}).mount('#social-links');
 }

@@ -1,3 +1,12 @@
+<template>
+	<div id="socials" class="center-children">
+		<div v-for="link in list" :key="link.url" class="social-link">
+			<a v-bind:href="link.url" target="_blank" rel="noreferrer">
+			<img v-bind:src="link.img" class="social fadeOnHover" draggable="false" v-bind:alt="link.alt"></a>
+		</div>
+	</div>
+</template>
+
 <script lang="ts">
 	import { defineComponent } from '@vue/runtime-core'
 
@@ -53,12 +62,3 @@
 		}
 	})
 </script>
-
-<template>
-	<div id="socials" class="center-children">
-		<div v-for="link in list" :key="link.url" class="social-link">
-			<a v-bind:href="link.url" target="_blank" rel="noreferrer">
-			<img v-bind:src="link.img" class="social fadeOnHover" draggable="false" v-bind:alt="link.alt"></a>
-		</div>
-	</div>
-</template>
