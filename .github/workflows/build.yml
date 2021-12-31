@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: test deploy task
+    - name: test build task
       run: |
         chmod +x ./scripts/build.sh
         ./scripts/build.sh
