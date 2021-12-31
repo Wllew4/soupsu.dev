@@ -52,7 +52,7 @@ module.exports = [
 					exclude: /node_modules/,
 				},
 				{
-					test: /\.svg$/,
+					test: /(\.svg)|(felix[1-5].webp)$/,
 					loader: 'file-loader',
 					options: {
 						name: '[name].[ext]'
@@ -70,7 +70,7 @@ module.exports = [
 		plugins: [
 			new CleanWebpackPlugin(),
 			new HtmlWebpackPlugin({
-				template: 'src/pages/container.html',
+				template: 'src/html/container.html',
 				minify: true
 			}),
 			new VueLoaderPlugin()
