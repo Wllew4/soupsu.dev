@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import error from '../pages/error.html'
+import error from '../html/error.html'
 
 export function loadError(code: number, message: string)
 {
