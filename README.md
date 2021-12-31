@@ -1,5 +1,4 @@
 # [soupsu.dev](https://soupsu.dev)
-![uptime](https://img.shields.io/pingpong/uptime/sp_3ee5fdb4e12a4da7b853c0e1fa061eb0)
 ![status](https://img.shields.io/website?down_message=offline&label=status&up_message=online&url=https%3A%2F%2Fsoupsu.dev)
 ![build](https://img.shields.io/github/workflow/status/Wllew4/soupsu.dev/Build)
 
