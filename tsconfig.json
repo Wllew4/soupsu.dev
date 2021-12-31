@@ -8,7 +8,7 @@
         "module": "commonjs",
 		"baseUrl": ".",
         "outDir": "bin/server",
-        "rootDir": "src/server",
+        "rootDir": "src",
 		"sourceMap": true,
         "strict": true,
         "esModuleInterop": true,

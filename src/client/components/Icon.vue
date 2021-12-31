@@ -47,15 +47,15 @@
 		require('../img/home/icons/felix' + i + '.webp');
 	}
 
-	const icon: Art = images[Math.floor(Math.random() * 5)]
+	const art: Art = images[Math.floor(Math.random() * 5)]
 
 	export default defineComponent({
 		data()
 		{
 			return {
-				icon: icon.path,
-				credit_name: icon.artist_name,
-				credit_url: icon.artist_url
+				icon: art.path,
+				credit_name: art.artist_name,
+				credit_url: art.artist_url
 			}
 		}
 	})

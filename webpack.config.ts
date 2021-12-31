@@ -52,7 +52,7 @@ module.exports = [
 					exclude: /node_modules/,
 				},
 				{
-					test: /(\.svg)|(felix[1-5].webp)$/,
+					test: /(\.svg)|(felix[1-5].webp)|(biflag.webp)$/,
 					loader: 'file-loader',
 					options: {
 						name: '[name].[ext]'
