@@ -1,14 +1,16 @@
 {
-	// This property is just for building backend
 	"files": [
-		"src/server/server.ts"
+		"ts/main.ts"
+	],
+	"include": [
+		"ts/*.ts"
 	],
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
 		"baseUrl": ".",
-        "outDir": "bin/server",
-        "rootDir": "src/server",
+        "outDir": "bin/client",
+        "rootDir": ".",
 		"sourceMap": true,
         "strict": true,
         "esModuleInterop": true,

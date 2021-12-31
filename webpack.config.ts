@@ -5,7 +5,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 module.exports = [
 	{
-		entry: './src/ts/main.ts',
+		entry: './src/client/ts/main.ts',
 		devtool: 'source-map',
 		module: {
 			rules: [
@@ -65,12 +65,12 @@ module.exports = [
 		},
 		output: {
 			filename: 'bundle.js',
-			path: path.resolve(__dirname, 'bin/site'),
+			path: path.resolve(__dirname, 'bin/client'),
 		},
 		plugins: [
 			new CleanWebpackPlugin(),
 			new HtmlWebpackPlugin({
-				template: 'src/html/container.html',
+				template: 'src/client/html/container.html',
 				minify: true
 			}),
 			new VueLoaderPlugin()

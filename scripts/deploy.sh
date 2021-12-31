@@ -1,3 +1,2 @@
-npx tsc
-yarn build --mode=production
-node bin/server.js
+chmod +x ./scripts/build.sh && ./scripts/build.sh
+node bin/server/server.js

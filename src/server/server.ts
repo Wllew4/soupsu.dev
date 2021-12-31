@@ -1,25 +1,21 @@
 import express from 'express'
 import path from 'path'
-import fs from 'fs'
+import redirs from './redirects.json'
 
 const PORT = process.env.PORT || 443
 const app = express()
 
 //	Serve static files
-app.use(express.static('bin/site'))
+app.use(express.static('bin/client'))
 
 //	Redirect handling
-type Redirect =
+interface Redirect
 {
     url: string,
     redirect: string
 }
 
-let redirects: Redirect[] = JSON.parse(
-    fs.readFileSync(
-        'redirects.json',
-        { encoding: 'utf8' }
-    ));
+let redirects: Redirect[] = redirs as Redirect[]
 
 for(let redirect of redirects)
 {
@@ -35,7 +31,7 @@ for(let redirect of redirects)
 */
 app.get('*', (_, res) =>
 {
-	res.sendFile(path.join(__dirname, 'site/index.html'))
+	res.sendFile(path.join(__dirname, 'client/index.html'))
 })
 
 app.listen(PORT, () =>
