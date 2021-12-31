@@ -3,7 +3,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "--max_old_space_size=512 webpack"
+    "build": "webpack"
   },
   "author": "Wllew4",
   "dependencies": {
