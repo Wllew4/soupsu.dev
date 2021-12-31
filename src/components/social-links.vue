@@ -1,46 +1,54 @@
 <script lang="ts">
-	import { defineComponent } from "@vue/runtime-core"
+	import { defineComponent } from '@vue/runtime-core'
 
-	type Social =
+	class Social
 	{
 		url: string;
 		img: string;
+		alt: string;
+
+		constructor(url: string, img: string)
+		{
+			this.url = url;
+			this.img = img;
+			this.alt = 'link to ' + new URL(url).hostname + ' profile'
+		}
 	}
 
-	const l: Social[] =
+	const socials: Social[] =
 	[
-		{
-			url: 'https://twitch.tv/soupsu',
-			img: 'twitch.svg'
-		},
-		{
-			url: 'https://twitter.com/soupsu_',
-			img: 'twitter.svg'
-		},
-		{
-			url: 'https://youtube.com/soupsepicgames',
-			img: 'youtube.svg'
-		},
-		{
-			url: 'https://discord.gg/BaJ4r9e',
-			img: 'discord.svg'
-		},
-		{
-			url: 'https://github.com/Wllew4',
-			img: 'github.svg'
-		}
+		new Social(
+			'https://twitch.tv/soupsu',
+			'twitch.svg'
+		),
+		new Social(
+			'https://twitter.com/soupsu_',
+			'twitter.svg'
+		),
+		new Social(
+			'https://youtube.com/soupsu',
+			'youtube.svg'
+		),
+		new Social(
+			'https://discord.gg/BaJ4r9e',
+			'discord.svg'
+		),
+		new Social(
+			'https://github.com/Wllew4',
+			'github.svg'
+		)
 	]
 
-	for (let i = 0; i < l.length; i++)
+	for (let i = 0; i < socials.length; i++)
 	{
-		require('../img/home/socials/' + l[i].img)
+		require('../img/home/socials/' + socials[i].img)
 	}
 
 	export default defineComponent({
 		data()
 		{
 			return {
-				list: l
+				list: socials
 			}
 		}
 	})
@@ -48,9 +56,9 @@
 
 <template>
 	<div id="socials" class="center-children">
-	<div v-for="link in list" :key="link.url" class="social-link">
-		<a v-bind:href="link.url" target="_blank">
-		<img v-bind:src="link.img" class="social fadeOnHover" draggable='false'></a>
+		<div v-for="link in list" :key="link.url" class="social-link">
+			<a v-bind:href="link.url" target="_blank" rel="noreferrer">
+			<img v-bind:src="link.img" class="social fadeOnHover" draggable="false" v-bind:alt="link.alt"></a>
+		</div>
 	</div>
-</div>
 </template>
