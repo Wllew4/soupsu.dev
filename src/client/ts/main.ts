@@ -12,7 +12,7 @@ function updateBody ()
 			}).mount('body')
             break;
         default:
-			loadError(404, 'Unable to locate<br>' + window.location.href);
+			loadError(404, 'Unable to locate ' + window.location.href);
             break;
     }
 }
