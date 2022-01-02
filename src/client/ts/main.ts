@@ -6,9 +6,9 @@ function updateBody ()
     switch(getUrl(window.location.pathname, 1))
     {
         case '':
-			const Home = require('../components/Home.vue').default
+			const MainPage = require('../components/MainPage.vue').default
 			createApp({
-				render: ()=>h(Home)
+				render: ()=>h(MainPage)
 			}).mount('body')
             break;
         default:

@@ -1,6 +1,8 @@
 <template>
-	<img width="500px" height="500px" v-bind:src="icon" id="pfp" draggable="false" alt="profile picture">
-	<p id="credit" class="small">Art by <a class="clickable" v-bind:href="credit_url" target="_blank" rel="noreferrer">{{ credit_name }}</a></p>
+	<div id="icon">
+		<img width="500px" height="500px" v-bind:src="icon" id="pfp" draggable="false" alt="profile picture">
+		<p id="credit" class="small">Art by <a class="clickable" v-bind:href="credit_url" target="_blank" rel="noreferrer">{{ credit_name }}</a></p>
+	</div>
 </template>
 
 <script lang="ts">
@@ -67,5 +69,21 @@
 		color: white;
 		font-family: 'Noto Sans JP';
 		margin: 0;
+	}
+
+	#pfp
+	{
+		height: 15rem;
+		width: 15rem;
+		border-radius: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		display: inline-block;
+	}
+	
+	#icon
+	{
+		width: auto;
+		text-align: center;
 	}
 </style>

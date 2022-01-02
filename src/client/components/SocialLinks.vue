@@ -62,3 +62,26 @@
 		}
 	})
 </script>
+
+<style lang="scss">
+	#socials
+	{
+		justify-content: space-evenly;
+		flex-basis: 100%;
+		padding-top: 4%;
+		flex-wrap: nowrap;
+	}
+
+	.social-link
+	{
+		border: 1px solid white;
+		border-radius: 50%;
+	}
+
+	.social
+	{
+		display: block;
+		height: 6rem;
+		width: 6rem;
+	}
+</style>
