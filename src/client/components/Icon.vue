@@ -17,7 +17,7 @@
 	[
 		{
 			path: 'felix1.webp',
-			artist_name: 'Creamy Roux',
+			artist_name: 'Roux',
 			artist_url: 'https://twitter.com/creamy_roux'
 		},
 		{

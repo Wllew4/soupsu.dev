@@ -1,3 +1,4 @@
+//	tsconfig for client
 {
 	"files": [
 		"ts/main.ts"

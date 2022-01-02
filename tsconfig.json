@@ -1,5 +1,5 @@
+//	tsconfig for server
 {
-	// This property is just for building backend
 	"files": [
 		"src/server/server.ts"
 	],

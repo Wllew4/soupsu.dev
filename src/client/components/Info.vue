@@ -12,14 +12,15 @@
 <script lang="ts">
 	import { defineComponent } from '@vue/runtime-core'
 	
-	const birthday: Date = new Date('02/03/2003')
 	require('../img/home/biflag.webp')
+	
+	const birthday: Date = new Date('02/03/2003')
 
 	export default defineComponent({
 		data()
 		{
 			return {
-				age: new Date().getFullYear() - birthday.getFullYear()
+				age: Math.floor((Date.now() - birthday.getTime()) / 31536000000)
 			}
 		}
 	})
