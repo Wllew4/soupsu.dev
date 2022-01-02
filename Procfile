@@ -1,2 +1,1 @@
-release: npx tsc
-web: node bin/server/server.js
+release: node bin/server/server.js
