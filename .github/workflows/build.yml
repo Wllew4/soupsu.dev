@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: test build task
-      run: yarn build
+      run: yarn install --frozen-lockfile && yarn build
