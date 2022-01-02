@@ -64,7 +64,6 @@
 <style lang="scss">
 	#credit, #credit *
 	{
-		text-align: center;
 		color: white;
 		font-family: 'Noto Sans JP';
 		margin: 0;

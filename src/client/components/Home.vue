@@ -64,6 +64,9 @@
 		height: 15rem;
 		width: 15rem;
 		border-radius: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		display: inline-block;
 	}
 
 	#home-info
@@ -96,5 +99,11 @@
 		display: block;
 		height: 6rem;
 		width: 6rem;
+	}
+
+	#icon
+	{
+		width: auto;
+		text-align: center;
 	}
 </style>
