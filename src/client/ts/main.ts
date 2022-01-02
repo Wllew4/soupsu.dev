@@ -1,12 +1,12 @@
 import { loadError } from './error'
 import { createApp, h } from 'vue';
-import Home from '../components/Home.vue'
 
 function updateBody ()
 {
     switch(getUrl(window.location.pathname, 1))
     {
         case '':
+			const Home = require('../components/Home.vue').default
 			createApp({
 				render: ()=>h(Home)
 			}).mount('body')
