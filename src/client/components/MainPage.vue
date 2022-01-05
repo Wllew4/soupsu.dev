@@ -2,15 +2,15 @@
 	<div id="container" class="center-children">
 		<div id="main-block">
 			<div id="tabs" class="text">
-				<div @click="selectTab(0)" class="clickable tab" v-bind:class="{ activeTab: activeTab==0 }">
+				<div @click="selectTab('')" class="clickable tab" v-bind:class="{ activeTab: activeTab==0 }">
 					Home
 				</div>
-				<div @click="selectTab(1)" class="clickable tab" v-bind:class="{ activeTab: activeTab==1 }">
+				<div @click="selectTab('projects')" class="clickable tab" v-bind:class="{ activeTab: activeTab==1 }">
 					Projects
 				</div>
-				<div @click="selectTab(2)" class="clickable tab" v-bind:class="{ activeTab: activeTab==2 }">
+				<!-- <div @click="selectTab(2)" class="clickable tab" v-bind:class="{ activeTab: activeTab==2 }">
 					Papers
-				</div>
+				</div> -->
 				<div @click="openFile('resume.pdf')" class="clickable tab">
 					Resume
 				</div>
@@ -18,7 +18,7 @@
 			<div id="content">
 				<Home v-if="activeTab == 0"/>
 				<Projects v-if="activeTab == 1"/>
-				<Papers v-if="activeTab == 2"/>
+				<!-- <Papers v-if="activeTab == 2"/> -->
 			</div>
 		</div>
 	</div>
@@ -30,16 +30,28 @@
 	import Projects from './Projects.vue'
 	import Papers from './Papers.vue'
 
+	interface IStringNumberDict
+	{
+		[index: string]: number;
+	}
+
+	const routes: IStringNumberDict = 
+	{
+		'': 0,
+		'projects': 1
+	}
+
 	export default defineComponent({
 		data() {
 			return {
-				activeTab: 0
+				activeTab: routes[window.location.pathname.substring(1)]
 			}
 		},
 		methods: {
-			selectTab(index: number): void
+			selectTab(path: string): void
 			{
-				this.activeTab = index
+				window.history.pushState(path, '', '/' + path)
+				this.activeTab =  routes[path]
 			},
 			openFile(link: string)
 			{

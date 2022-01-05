@@ -1,15 +1,18 @@
 import { loadError } from './error'
 import { createApp, h } from 'vue';
 
+import MainPage from '../components/MainPage.vue'
+
 function updateBody ()
 {
     switch(getUrl(window.location.pathname, 1))
     {
         case '':
-			const MainPage = require('../components/MainPage.vue').default
-			createApp({
-				render: ()=>h(MainPage)
-			}).mount('body')
+		case 'projects':
+			createApp(
+				{
+					render: ()=>h(MainPage)
+				}).mount('body')
             break;
         default:
 			loadError(404, 'Unable to locate ' + window.location.href);

@@ -82,7 +82,6 @@
 	{
 		display: block;
 		height: auto;
-		// width: 100%;
 		width: 6rem;
 	}
 </style>
