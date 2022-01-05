@@ -81,7 +81,8 @@
 	.social
 	{
 		display: block;
-		height: 6rem;
+		height: auto;
+		// width: 100%;
 		width: 6rem;
 	}
 </style>

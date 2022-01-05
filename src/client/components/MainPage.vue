@@ -3,15 +3,22 @@
 		<div id="main-block">
 			<div id="tabs" class="text">
 				<div @click="selectTab(0)" class="clickable tab" v-bind:class="{ activeTab: activeTab==0 }">
-					Home {{activeTab}}
+					Home
 				</div>
 				<div @click="selectTab(1)" class="clickable tab" v-bind:class="{ activeTab: activeTab==1 }">
 					Projects
+				</div>
+				<div @click="selectTab(2)" class="clickable tab" v-bind:class="{ activeTab: activeTab==2 }">
+					Papers
+				</div>
+				<div @click="openFile('resume.pdf')" class="clickable tab">
+					Resume
 				</div>
 			</div>
 			<div id="content">
 				<Home v-if="activeTab == 0"/>
 				<Projects v-if="activeTab == 1"/>
+				<Papers v-if="activeTab == 2"/>
 			</div>
 		</div>
 	</div>
@@ -21,26 +28,28 @@
 	import { defineComponent } from '@vue/runtime-core'
 	import Home from './Home.vue'
 	import Projects from './Projects.vue'
+	import Papers from './Papers.vue'
 
 	export default defineComponent({
 		data() {
 			return {
-				activeTab: 0,
-				tabs: [
-					Home,
-					Projects
-				]
+				activeTab: 0
 			}
 		},
 		methods: {
 			selectTab(index: number): void
 			{
 				this.activeTab = index
+			},
+			openFile(link: string)
+			{
+				window.open(link)
 			}
 		},
 		components: {
 			Home,
-			Projects
+			Projects,
+			Papers
 		}
 	})
 </script>
@@ -77,6 +86,7 @@
 		display: flex;
 		flex-direction: row;
 		height: $pad;
+		max-width: 100%;
 	}
 
 	#content
