@@ -28,7 +28,9 @@
 	import { defineComponent } from '@vue/runtime-core'
 	import Home from './Home.vue'
 	import Projects from './Projects.vue'
-	import Papers from './Papers.vue'
+	// import Papers from './Papers.vue'
+
+	require('../img/resume.pdf')
 
 	interface IStringNumberDict
 	{
@@ -60,8 +62,7 @@
 		},
 		components: {
 			Home,
-			Projects,
-			Papers
+			Projects
 		}
 	})
 </script>

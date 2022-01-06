@@ -8,22 +8,22 @@
 		he/him<br>
 		Computer Science Major<br>
 		Boston, MA<br></span>
+		<a href="https://ko-fi.com/soupsu" target="_blank" rel="noreferrer"><img src="https://ko-fi.com/img/githubbutton_sm.svg" id="ko-fi" class="clickable"/></a>
 	</div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 	import { defineComponent } from '@vue/runtime-core'
 	
 	require('../img/home/biflag.webp')
 	
-	const birthday: Date = new Date('02/03/2003')
+	const birthday = new Date('02/03/2003')
 
 	export default defineComponent({
-		data()
-		{
+		data() {
 			return {
 				age: Math.floor((Date.now() - birthday.getTime()) / 31536000000)
-			}
+			};
 		}
 	})
 </script>
@@ -38,5 +38,18 @@
 		color: white;
 		text-align: center;
 		font-family: 'Noto Sans JP';
+	}
+
+	#ko-fi
+	{
+		margin-top: 0.4rem;
+	}
+
+	@media only screen and (max-width: 779px)
+	{
+		#ko-fi
+		{
+			width: 85% !important;
+		}
 	}
 </style>
