@@ -1,7 +1,7 @@
-import { loadError } from './error'
 import { createApp, h } from 'vue';
 
 import MainPage from '../components/MainPage.vue'
+import Err from '../components/Error.vue'
 
 function updateBody ()
 {
@@ -9,13 +9,18 @@ function updateBody ()
     {
         case '':
 		case 'projects':
-			createApp(
-				{
+			createApp({
 					render: ()=>h(MainPage)
 				}).mount('body')
             break;
         default:
-			loadError(404, 'Unable to locate ' + window.location.href);
+			createApp({
+					render: ()=>h(Err)
+				},
+				{
+					code: 404,
+					message: 'Unable to locate ' + window.location.href
+				}).mount('body')
             break;
     }
 }

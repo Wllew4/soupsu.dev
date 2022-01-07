@@ -1,4 +1,5 @@
 <template>
+<div id="body">
 	<div id="container" class="center-children">
 		<div id="main-block">
 			<div id="tabs" class="text">
@@ -22,6 +23,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 </template>
 
 <script lang="ts">
@@ -75,9 +77,10 @@
 
 	$pad: 2.25rem;
 
-	body
+	#body
 	{
-		padding: 5%;
+		height: 90vh;
+		padding: 5vh;
 		overflow-x: hidden;
 	}
 

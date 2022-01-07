@@ -68,7 +68,7 @@
 	{
 		justify-content: space-evenly;
 		flex-basis: 100%;
-		padding-top: 4%;
+		padding-top: 1rem;
 		flex-wrap: nowrap;
 	}
 
