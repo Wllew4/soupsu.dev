@@ -2,7 +2,7 @@
 	<div id="socials" class="center-children">
 		<div v-for="link in list" :key="link.url" class="social-link">
 			<a v-bind:href="link.url" target="_blank" rel="noreferrer">
-			<img v-bind:src="link.img" class="social fadeOnHover" draggable="false" v-bind:alt="link.alt" width="96px" height="96px"></a>
+			<img v-bind:src="'public/' + link.img" class="social fadeOnHover" draggable="false" v-bind:alt="link.alt" width="96px" height="96px"></a>
 		</div>
 	</div>
 </template>
@@ -50,7 +50,7 @@
 
 	for (let i = 0; i < socials.length; i++)
 	{
-		require('../img/home/socials/' + socials[i].img)
+		require('../assets/img/socials/' + socials[i].img)
 	}
 
 	export default defineComponent({

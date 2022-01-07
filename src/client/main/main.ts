@@ -1,7 +1,7 @@
 import { createApp, h } from 'vue';
 
-import MainPage from '../components/MainPage.vue'
-import Err from '../components/Error.vue'
+import MainPage from './MainPage.vue'
+import Err from './Error.vue'
 
 function updateBody ()
 {

@@ -1,10 +1,10 @@
 //	tsconfig for client
 {
 	"files": [
-		"ts/main.ts"
+		"main/main.ts"
 	],
 	"include": [
-		"ts/*.ts"
+		"*.ts"
 	],
     "compilerOptions": {
         "target": "es5",

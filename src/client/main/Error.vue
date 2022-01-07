@@ -4,14 +4,14 @@
 		<p id="error-msg">{{ error_msg }}</p>
 	</div>
 	<div id="right">
-		<img id="dansen" src="dansa.GIF">
+		<img id="dansen" src="/public/dansa.GIF">
 	</div>
 </template>
 
 <script lang="ts">
 	import { defineComponent } from "vue"
 
-	require('../img/dansa.GIF')
+	require('./assets/img/dansa.GIF')
 
 	export default defineComponent({
 		props: {
@@ -29,10 +29,10 @@
 </script>
 
 <style lang="scss">
-	@use '../scss/util';
-	@use '../scss/text';
-	@use '../scss/mobile';
-	@use '../scss/spacebg';
+	// @use '../main/scss/util';
+	// @use '../main/scss/text';
+	// @use '../main/scss/mobile';
+	// @use '../main/scss/spacebg';
 
 	#error
 	{

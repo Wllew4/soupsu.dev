@@ -12,7 +12,7 @@
 				<!-- <div @click="selectTab(2)" class="clickable tab" v-bind:class="{ activeTab: activeTab==2 }">
 					Papers
 				</div> -->
-				<div @click="openFile('resume.pdf')" class="clickable tab">
+				<div @click="openFile('public/resume.pdf')" class="clickable tab">
 					Resume
 				</div>
 			</div>
@@ -28,11 +28,11 @@
 
 <script lang="ts">
 	import { defineComponent } from '@vue/runtime-core'
-	import Home from './Home.vue'
-	import Projects from './Projects.vue'
+	import Home from './components/Home.vue'
+	import Projects from './components/Projects.vue'
 	// import Papers from './Papers.vue'
 
-	require('../img/resume.pdf')
+	require('./assets/resume.pdf')
 
 	interface IStringNumberDict
 	{
@@ -70,10 +70,10 @@
 </script>
 
 <style lang="scss">
-	@use '../scss/util';
-	@use '../scss/text';
-	@use '../scss/mobile';
-	@use '../scss/spacebg';
+	@use './scss/util';
+	@use './scss/text';
+	@use './scss/mobile';
+	@use './scss/spacebg';
 
 	$pad: 2.25rem;
 

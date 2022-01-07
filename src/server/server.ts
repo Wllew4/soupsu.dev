@@ -7,6 +7,8 @@ const app = express()
 
 //	Serve static files
 app.use(express.static('bin/client'))
+// app.use(express.static('bin/client/main'))
+// app.use(express.static('bin/client/error'))
 
 //	Redirect handling
 interface Redirect
@@ -25,13 +27,15 @@ for(let redirect of redirects)
 	})
 }
 
-/*	Let front handle misc paths
-	THIS HAS TO COME LAST
-	ELSE ALL FILES RETURN INDEX.HTML
-*/
-app.get('*', (_, res) =>
+/*  Main landing pages  */
+app.get(['/', '/projects'], (_, res) =>
 {
 	res.sendFile(path.join(__dirname, '../client/index.html'))
+})
+
+app.get('*', (_,res)=>
+{
+	res.status(404).sendFile(path.join(__dirname, '../client/index.html'))
 })
 
 app.listen(PORT, () =>

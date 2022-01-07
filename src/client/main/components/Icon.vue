@@ -18,27 +18,27 @@
 	const images: Art[] =
 	[
 		{
-			path: 'felix1.webp',
+			path: 'public/felix1.webp',
 			artist_name: 'Roux',
 			artist_url: 'https://twitter.com/creamy_roux'
 		},
 		{
-			path: 'felix2.webp',
+			path: 'public/felix2.webp',
 			artist_name: 'SkullMutt',
 			artist_url: 'https://twitter.com/skullmutt'
 		},
 		{
-			path: 'felix3.webp',
+			path: 'public/felix3.webp',
 			artist_name: 'SkullMutt',
 			artist_url: 'https://twitter.com/skullmutt'
 		},
 		{
-			path: 'felix4.webp',
+			path: 'public/felix4.webp',
 			artist_name: 'Agus',
 			artist_url: 'https://twitter.com/RainTheSpotty'
 		},
 		{
-			path: 'felix5.webp',
+			path: 'public/felix5.webp',
 			artist_name: 'Fleur',
 			artist_url: 'https://twitter.com/Fleurfurr'
 		}
@@ -46,7 +46,7 @@
 
 	for(let i = 1; i < 6; i++)
 	{
-		require('../img/home/icons/felix' + i + '.webp');
+		require('../assets/img/icons/felix' + i + '.webp');
 	}
 
 	const art: Art = images[Math.floor(Math.random() * 5)]

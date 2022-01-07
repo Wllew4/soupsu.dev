@@ -4,18 +4,19 @@
 		<span class="small">aka</span><br>
 		<span class="text">Will, Felix, Janelle<br>
 		{{ age }}
-		<img alt="Bisexual pride flag" draggable="false" class="inlineimg" src="biflag.webp" width="128px" height="128px">
+		<img alt="Bisexual pride flag" draggable="false" class="inlineimg" src="public/biflag.webp" width="128px" height="128px">
 		he/him<br>
 		Computer Science Major<br>
 		Boston, MA<br></span>
-		<a href="https://ko-fi.com/soupsu" target="_blank" rel="noreferrer"><img src="https://ko-fi.com/img/githubbutton_sm.svg" id="ko-fi" class="clickable"/></a>
+		<a href="https://ko-fi.com/soupsu" target="_blank" rel="noreferrer" alt="link to ko-fi profile">
+			<img src="https://ko-fi.com/img/githubbutton_sm.svg" id="ko-fi" alt="link to ko-fi profile" class="clickable" width="223px" height="30px"/></a>
 	</div>
 </template>
 
 <script lang="js">
 	import { defineComponent } from '@vue/runtime-core'
 	
-	require('../img/home/biflag.webp')
+	require('../assets/img/biflag.webp')
 	
 	const birthday = new Date('02/03/2003')
 
