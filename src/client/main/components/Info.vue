@@ -4,7 +4,7 @@
 		<span class="small">aka</span><br>
 		<span class="text">Will, Felix, Janelle<br>
 		{{ age }}
-		<img alt="Bisexual pride flag" draggable="false" class="inlineimg" src="public/biflag.webp" width="128px" height="128px">
+		<img alt="Bisexual pride flag" draggable="false" class="inlineimg" src="public/img/biflag.webp" width="128px" height="128px">
 		he/him<br>
 		Computer Science Major<br>
 		Boston, MA<br></span>

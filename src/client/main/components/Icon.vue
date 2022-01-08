@@ -1,6 +1,6 @@
 <template>
 	<div id="icon">
-		<img width="500px" height="500px" v-bind:src="icon" id="pfp" draggable="false" alt="profile picture">
+		<img width="500px" height="500px" v-bind:src="'/public/img/icons/'+icon" id="pfp" draggable="false" alt="profile picture">
 		<p id="credit" class="small">Art by <a class="clickable" v-bind:href="credit_url" target="_blank" rel="noreferrer">{{ credit_name }}</a></p>
 	</div>
 </template>
@@ -18,27 +18,27 @@
 	const images: Art[] =
 	[
 		{
-			path: 'public/felix1.webp',
+			path: 'felix1.webp',
 			artist_name: 'Roux',
 			artist_url: 'https://twitter.com/creamy_roux'
 		},
 		{
-			path: 'public/felix2.webp',
+			path: 'felix2.webp',
 			artist_name: 'SkullMutt',
 			artist_url: 'https://twitter.com/skullmutt'
 		},
 		{
-			path: 'public/felix3.webp',
+			path: 'felix3.webp',
 			artist_name: 'SkullMutt',
 			artist_url: 'https://twitter.com/skullmutt'
 		},
 		{
-			path: 'public/felix4.webp',
+			path: 'felix4.webp',
 			artist_name: 'Agus',
 			artist_url: 'https://twitter.com/RainTheSpotty'
 		},
 		{
-			path: 'public/felix5.webp',
+			path: 'felix5.webp',
 			artist_name: 'Fleur',
 			artist_url: 'https://twitter.com/Fleurfurr'
 		}

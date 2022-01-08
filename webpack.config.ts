@@ -8,13 +8,11 @@ const loaders =
 	rules: [
 		{
 			test: /\.vue$/,
-			loader: 'vue-loader',
-			exclude: /node_modules/,
+			loader: 'vue-loader'
 		},
 		{
 			test: /\.ts$/,
 			loader: 'ts-loader',
-			exclude: /node_modules/,
 			options: {
 				appendTsSuffixTo: [/\.vue$/]
 			}
@@ -25,8 +23,7 @@ const loaders =
 				"style-loader",
 				"css-loader",
 				"sass-loader"
-			],
-			exclude: /node_modules/,
+			]
 		},
 		{
 			test: /\.html$/,
@@ -37,14 +34,14 @@ const loaders =
 						minimize: true
 					}
 				}
-			],
-			exclude: /node_modules/,
+			]
 		},
 		{
 			test: /(\.svg)|(felix[1-5].webp)|(\.GIF)|(biflag.webp)|(\.pdf)$/,
 			loader: 'file-loader',
 			options: {
-				name: 'public/[name].[ext]'
+				context: path.resolve(__dirname, 'src/client/main/assets'),
+				name: 'public/[path][name].[ext]'
 			}
 		}
 	]
@@ -68,23 +65,5 @@ module.exports = [
 			}),
 			new VueLoaderPlugin()
 		]
-	},
-	// {
-	// 	entry: './src/client/error/error.ts',
-	// 	devtool: 'source-map',
-	// 	module: loaders,
-	// 	output: {
-	// 		publicPath: '/error/',
-	// 		filename: 'error.js',
-	// 		path: path.resolve(__dirname, 'bin/client/error')
-	// 	},
-	// 	plugins: [
-	// 		new CleanWebpackPlugin(),
-	// 		new HtmlWebpackPlugin({
-	// 			template: 'src/client/container.html',
-	// 			minify: true
-	// 		}),
-	// 		new VueLoaderPlugin()
-	// 	]
-	// }
+	}
 ]

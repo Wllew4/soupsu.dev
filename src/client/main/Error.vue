@@ -4,7 +4,7 @@
 		<p id="error-msg">{{ error_msg }}</p>
 	</div>
 	<div id="right">
-		<img id="dansen" src="/public/dansa.GIF">
+		<img id="dansen" src="/public/img/dansa.GIF">
 	</div>
 </template>
 
