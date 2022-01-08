@@ -67,7 +67,7 @@
 <style lang="scss">
 	@use './scss/util';
 	@use './scss/text';
-	@use './scss/mobile';
+	@import './scss/mobile';
 
 	$pad: 2.25rem;
 
@@ -100,10 +100,10 @@
 		flex-direction: row;
 		height: $pad;
 		max-width: 100%;
-		// @include mobile
-		// {
-		// 	height: 5rem !important;
-		// }
+		@include mobile
+		{
+			height: 5rem !important;
+		}
 	}
 
 	.tab

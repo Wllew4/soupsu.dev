@@ -31,7 +31,7 @@
 
 <style lang="scss">
 	@use '../scss/util';
-	@use '../scss/mobile';
+	@import '../scss/mobile';
 
 	#home-info
 	{
@@ -42,10 +42,10 @@
 		color: white;
 		text-align: center;
 		font-family: 'Noto Sans JP';
-		// @include mobile
-		// {
-		// 	min-width: 100% !important;
-		// }
+		@include mobile
+		{
+			min-width: 100% !important;
+		}
 	}
 
 	#ko-fi
@@ -53,10 +53,10 @@
 		@extend %clickable;
 		margin-top: 0.4rem;
 		height: auto;
-		// @include mobile
-		// {
-		// 	width: 60% !important;
-		// }
+		@include mobile
+		{
+			width: 60% !important;
+		}
 	}
 
 	@media only screen and (max-width: 779px)

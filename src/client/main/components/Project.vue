@@ -35,7 +35,7 @@ import { defineComponent } from "@vue/runtime-core";
 
 <style lang="scss">
 	@use '../scss/util';
-	@use '../scss/mobile';
+	@import '../scss/mobile';
 
 	.outer
 	{
@@ -55,10 +55,10 @@ import { defineComponent } from "@vue/runtime-core";
 			background-color: rgba(0, 0, 0, 0.25);
 		}
 
-		// @include mobile
-		// {
-		// 	width: 100%;
-		// }
+		@include mobile
+		{
+			width: 100%;
+		}
 	}
 
 	.project_name
@@ -68,10 +68,10 @@ import { defineComponent } from "@vue/runtime-core";
 		font-size: 2rem;
 		margin: 0;
 		text-align: center;
-		// @include mobile
-		// {
-		// 	font-size: 3rem;
-		// }
+		@include mobile
+		{
+			font-size: 3rem;
+		}
 	}
 
 	.project_desc
@@ -80,9 +80,9 @@ import { defineComponent } from "@vue/runtime-core";
 		color: white;
 		font-size: 1rem;
 		margin: 0.5rem 0 0.5rem 0;
-		// @include mobile
-		// {
-		// 	font-size: 2rem;
-		// }
+		@include mobile
+		{
+			font-size: 2rem;
+		}
 	}
 </style>

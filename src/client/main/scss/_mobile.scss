@@ -1,74 +1,11 @@
-// @mixin mobile
-// {
-// 	@media only screen 
-// 	and (min-device-width: 320px) 
-// 	and (max-device-width: 480px)
-// 	and (-webkit-min-device-pixel-ratio: 2)
-// 	and (orientation: portrait)
-// 	{
-// 		@content;
-// 	}
-// }
-@media only screen 
+@mixin mobile
+{
+	@media only screen 
 	and (min-device-width: 320px) 
 	and (max-device-width: 480px)
 	and (-webkit-min-device-pixel-ratio: 2)
 	and (orientation: portrait)
-{
-    #home-info {
-        min-width: 100% !important;
-    }
-
-    .title {
-        font-size: 8rem;
-    }
-
-    .small {
-        font-size: 2rem;
-    }
-
-    .text {
-        font-size: 3rem;
-    }
-
-    .inlineimg {
-        height: 3rem;
-        vertical-align: -0.5rem;
-        margin-left: 0.2rem;
-        margin-right: 0.2rem;
-    }
-
-	#icon {
-		width: 100% !important;
-	}
-
-	#tabs
 	{
-		height: 5rem !important;
-	}
-
-	body
-	{
-		background-size: cover !important;
-	}
-
-	.outer
-	{
-		width: 100%;
-	}
-
-	.project_name
-	{
-		font-size: 3rem;
-	}
-
-	.project_desc
-	{
-		font-size: 2rem;
-	}
-
-	#ko-fi
-	{
-		width: 60% !important;
+		@content;
 	}
 }

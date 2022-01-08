@@ -65,7 +65,7 @@
 
 <style lang="scss">
 	@use '../scss/text';
-	@use '../scss/mobile';
+	@import '../scss/mobile';
 
 	#credit, #credit *
 	{
@@ -89,9 +89,9 @@
 	{
 		width: auto;
 		text-align: center;
-		// @include mobile
-		// {
-		// 	width: 100% !important;
-		// }
+		@include mobile
+		{
+			width: 100% !important;
+		}
 	}
 </style>

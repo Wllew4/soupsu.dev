@@ -73,7 +73,6 @@
 		flex-basis: 100%;
 		padding-top: 1rem;
 		flex-wrap: nowrap;
-		// height: 100%;
 		max-height: 6rem;
 		width: 100%;
 	}
@@ -82,7 +81,6 @@
 	{
 		border: 1px solid white;
 		border-radius: 50%;
-		// height: 100%;
 		max-height: 6rem;
 		width: 6rem;
 		max-width: 100/6%;

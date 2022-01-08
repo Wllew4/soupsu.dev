@@ -31,7 +31,6 @@
 <style lang="scss">
 	@use './scss/util';
 	@use './scss/text';
-	// @use './scss/mobile';
 
 	body
 	{
