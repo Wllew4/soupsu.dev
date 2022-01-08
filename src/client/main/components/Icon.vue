@@ -1,7 +1,7 @@
 <template>
 	<div id="icon">
-		<img width="500" height="500" v-bind:src="'/public/img/icons/'+icon" id="pfp" draggable="false" alt="profile picture">
-		<p id="credit" class="small">Art by <a class="clickable" v-bind:href="credit_url" target="_blank" rel="noreferrer">{{ credit_name }}</a></p>
+		<img id="pfp" alt="profile picture" v-bind:src="'/public/img/icons/'+icon" width="500" height="500" draggable="false">
+		<p id="credit">Art by <a v-bind:href="credit_url" target="_blank" rel="noreferrer">{{ credit_name }}</a></p>
 	</div>
 </template>
 
@@ -64,8 +64,12 @@
 </script>
 
 <style lang="scss">
+	@use '../scss/text';
+	@use '../scss/mobile';
+
 	#credit, #credit *
 	{
+		@extend .small;
 		color: white;
 		font-family: 'Noto Sans JP';
 		margin: 0;
@@ -85,5 +89,9 @@
 	{
 		width: auto;
 		text-align: center;
+		// @include mobile
+		// {
+		// 	width: 100% !important;
+		// }
 	}
 </style>

@@ -1,16 +1,30 @@
+// @use './mobile';
+
 .title
 {
     font-size: 4rem;
+	// @include mobile
+	// {
+	// 	font-size: 8rem;
+	// }
 }
 
 .small
 {
     font-size: 1rem;
+	// @include mobile
+	// {
+	// 	font-size: 2rem;
+	// }
 }
 
 .text
 {
     font-size: 1.5rem;
+	// @include mobile
+	// {
+	// 	font-size: 3rem;
+	// }
 }
 
 .inlineimg
@@ -20,4 +34,11 @@
     vertical-align: -0.2rem;
     margin-left: 0.1rem;
     margin-right: 0.1rem;
+	// @include mobile
+	// {
+	// 	height: 3rem;
+	// 	vertical-align: -0.5rem;
+	// 	margin-left: 0.2rem;
+	// 	margin-right: 0.2rem;
+	// }
 }

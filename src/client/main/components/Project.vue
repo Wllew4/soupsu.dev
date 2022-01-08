@@ -1,5 +1,5 @@
 <template>
-	<div @click="openLink(link)" class="outer clickable">
+	<div @click="openLink(link)" class="outer">
 		<p class="project_name">{{title}}</p>
 		<p class="project_desc">
 			{{desc}}
@@ -34,8 +34,12 @@ import { defineComponent } from "@vue/runtime-core";
 </script>
 
 <style lang="scss">
+	@use '../scss/util';
+	@use '../scss/mobile';
+
 	.outer
 	{
+		@extend %clickable;
 		width: 17.25rem;
 		max-width: 100%;
 		flex-grow: 2;
@@ -50,6 +54,11 @@ import { defineComponent } from "@vue/runtime-core";
 		{
 			background-color: rgba(0, 0, 0, 0.25);
 		}
+
+		// @include mobile
+		// {
+		// 	width: 100%;
+		// }
 	}
 
 	.project_name
@@ -59,6 +68,10 @@ import { defineComponent } from "@vue/runtime-core";
 		font-size: 2rem;
 		margin: 0;
 		text-align: center;
+		// @include mobile
+		// {
+		// 	font-size: 3rem;
+		// }
 	}
 
 	.project_desc
@@ -67,5 +80,9 @@ import { defineComponent } from "@vue/runtime-core";
 		color: white;
 		font-size: 1rem;
 		margin: 0.5rem 0 0.5rem 0;
+		// @include mobile
+		// {
+		// 	font-size: 2rem;
+		// }
 	}
 </style>

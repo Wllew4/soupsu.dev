@@ -1,25 +1,24 @@
 body
 {
-	// padding: 0;
     margin: 0;
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
 }
 
-.center-children
+%center-children
 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.clickable:hover
+%clickable:hover
 {
     cursor: pointer;
 }
 
-.fadeOnHover
+%fadeOnHover
 {
     transition-duration: 0.4s;
 
@@ -27,4 +26,10 @@ body
 	{
 		filter: brightness(0.75);
 	}
+}
+
+%spacebg
+{
+    background-image: url('./assets/img/space.webp');
+    background-size: cover;
 }

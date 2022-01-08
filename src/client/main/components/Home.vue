@@ -1,5 +1,5 @@
 <template>
-	<div id="icon-info" class="center-children">
+	<div id="icon-info">
 		<Icon/>
 		<Info/>
 	</div>
@@ -21,8 +21,11 @@
 </script>
 
 <style lang="scss">
+	@use '../scss/util';
+
 	#icon-info
 	{
+		@extend %center-children;
 		flex-wrap: wrap;
 	}
 </style>

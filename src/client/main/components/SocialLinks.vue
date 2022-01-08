@@ -1,8 +1,8 @@
 <template>
-	<div id="socials" class="center-children">
-		<div v-for="link in list" :key="link.url" class="social-link">
+	<div id="socials">
+		<div class="social-link" v-for="link in list" :key="link.url">
 			<a v-bind:href="link.url" target="_blank" rel="noreferrer">
-			<img v-bind:src="'public/img/socials/' + link.img" class="social fadeOnHover" draggable="false" v-bind:alt="link.alt" width="96" height="96"></a>
+				<img v-bind:alt="link.alt" class="social" v-bind:src="'public/img/socials/' + link.img" width="96" height="96" draggable="false"></a>
 		</div>
 	</div>
 </template>
@@ -64,8 +64,11 @@
 </script>
 
 <style lang="scss">
+	@use '../scss/util';
+
 	#socials
 	{
+		@extend %center-children;
 		justify-content: space-evenly;
 		flex-basis: 100%;
 		padding-top: 1rem;
@@ -87,6 +90,7 @@
 
 	.social
 	{
+		@extend %fadeOnHover;
 		display: block;
 		height: 100%;
 		width: 100%;

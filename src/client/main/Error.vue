@@ -29,10 +29,14 @@
 </script>
 
 <style lang="scss">
-	// @use '../main/scss/util';
-	// @use '../main/scss/text';
-	// @use '../main/scss/mobile';
-	// @use '../main/scss/spacebg';
+	@use './scss/util';
+	@use './scss/text';
+	// @use './scss/mobile';
+
+	body
+	{
+		@extend %spacebg;
+	}
 
 	#error
 	{
