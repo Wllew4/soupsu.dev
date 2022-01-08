@@ -2,7 +2,7 @@
 	<div id="socials" class="center-children">
 		<div v-for="link in list" :key="link.url" class="social-link">
 			<a v-bind:href="link.url" target="_blank" rel="noreferrer">
-			<img v-bind:src="'public/img/socials/' + link.img" class="social fadeOnHover" draggable="false" v-bind:alt="link.alt" width="96px" height="96px"></a>
+			<img v-bind:src="'public/img/socials/' + link.img" class="social fadeOnHover" draggable="false" v-bind:alt="link.alt" width="96" height="96"></a>
 		</div>
 	</div>
 </template>
@@ -70,18 +70,25 @@
 		flex-basis: 100%;
 		padding-top: 1rem;
 		flex-wrap: nowrap;
+		// height: 100%;
+		max-height: 6rem;
+		width: 100%;
 	}
 
 	.social-link
 	{
 		border: 1px solid white;
 		border-radius: 50%;
+		// height: 100%;
+		max-height: 6rem;
+		width: 6rem;
+		max-width: 100/6%;
 	}
 
 	.social
 	{
 		display: block;
-		height: auto;
-		width: 6rem;
+		height: 100%;
+		width: 100%;
 	}
 </style>

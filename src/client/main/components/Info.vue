@@ -4,12 +4,12 @@
 		<span class="small">aka</span><br>
 		<span class="text">Will, Felix, Janelle<br>
 		{{ age }}
-		<img alt="Bisexual pride flag" draggable="false" class="inlineimg" src="public/img/biflag.webp" width="128px" height="128px">
+		<img alt="Bisexual pride flag" draggable="false" class="inlineimg" src="public/img/biflag.webp" width="128" height="128">
 		he/him<br>
 		Computer Science Major<br>
 		Boston, MA<br></span>
 		<a href="https://ko-fi.com/soupsu" target="_blank" rel="noreferrer" alt="link to ko-fi profile">
-			<img src="https://ko-fi.com/img/githubbutton_sm.svg" id="ko-fi" alt="link to ko-fi profile" class="clickable" width="223px" height="30px"/></a>
+			<img src="https://ko-fi.com/img/githubbutton_sm.svg" id="ko-fi" alt="link to ko-fi profile" class="clickable" width="223" height="30"/></a>
 	</div>
 </template>
 
@@ -44,13 +44,14 @@
 	#ko-fi
 	{
 		margin-top: 0.4rem;
+		height: auto;
 	}
 
 	@media only screen and (max-width: 779px)
 	{
 		#ko-fi
 		{
-			width: 85% !important;
+			width: 60% !important;
 		}
 	}
 </style>

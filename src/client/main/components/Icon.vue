@@ -1,6 +1,6 @@
 <template>
 	<div id="icon">
-		<img width="500px" height="500px" v-bind:src="'/public/img/icons/'+icon" id="pfp" draggable="false" alt="profile picture">
+		<img width="500" height="500" v-bind:src="'/public/img/icons/'+icon" id="pfp" draggable="false" alt="profile picture">
 		<p id="credit" class="small">Art by <a class="clickable" v-bind:href="credit_url" target="_blank" rel="noreferrer">{{ credit_name }}</a></p>
 	</div>
 </template>

@@ -7,10 +7,8 @@ const app = express()
 
 //	Serve static files
 app.use(express.static('bin/client'))
-// app.use(express.static('bin/client/main'))
-// app.use(express.static('bin/client/error'))
 
-//	Redirect handling
+/*	Redirect handling  */
 interface Redirect
 {
     url: string,
@@ -33,6 +31,7 @@ app.get(['/', '/projects'], (_, res) =>
 	res.sendFile(path.join(__dirname, '../client/index.html'))
 })
 
+/*	404  */
 app.get('*', (_,res)=>
 {
 	res.status(404).sendFile(path.join(__dirname, '../client/index.html'))
