@@ -3,7 +3,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":		"yarn build_server && yarn build_webpack --mode=production",
+    "build":		"yarn build_server && yarn webpack --mode=production",
 	"build_server": "npx tsc",
 	"build_webpack":"webpack --mode=development",
 	"launch":		"node bin/server/server.js"

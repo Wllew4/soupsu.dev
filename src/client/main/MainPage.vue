@@ -9,9 +9,6 @@
 				<div class="tab" v-bind:class="{ activeTab: activeTab==1 }" @click="selectTab('projects')">
 					Projects
 				</div>
-				<div class="tab" @click="openFile('public/resume.pdf')">
-					Resume
-				</div>
 			</div>
 			<div id="content">
 				<Home 		v-if="activeTab == 0"/>
@@ -26,8 +23,6 @@
 	import { defineComponent } from '@vue/runtime-core'
 	import Home from './components/Home.vue'
 	import Projects from './components/Projects.vue'
-
-	require('./assets/resume.pdf')
 
 	interface IStringNumberDict
 	{
