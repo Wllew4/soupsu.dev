@@ -1,33 +1,29 @@
 <template>
 <div id="projects">
-	<Project
-		title="soupsu.dev"
-		desc="This website!
-		A personal hub for social media links,
-		personal projects, etc."
-		link="https://github.com/Wllew4/soupsu.dev"/>
-	<Project
-		title="node-ttv"
-		desc="A Node.js wrapper for
-		Twitch.tv's Helix API."
-		link="https://github.com/Wllew4/node-ttv"/>
-	<Project
-		title="bofa_scraper"
-		desc="Simple Python web-scraper
-		to get personal transaction
-		data from Bank of America account."
-		link="https://github.com/Wllew4/bofa_scraper"/>
+	<Project v-for="i in projects" :key="i[0]"
+		:title="i.title"
+		:desc="i.desc"
+		:link="i.link"/>
 </div>
 </template>
 
 <script lang="ts">
+import { defineComponent } from "@vue/runtime-core";
 import Project from "./Project.vue";
 
-export default {
-components: {
-	Project
-}
-}
+import projects from '../data/projects.json'
+
+export default defineComponent({
+	data()
+	{
+		return {
+			projects
+		}
+	},
+	components: {
+		Project
+	}
+})
 </script>
 
 <style lang="scss">

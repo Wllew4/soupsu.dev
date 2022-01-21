@@ -11,7 +11,7 @@
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
 My [website](https://soupsu.dev).
-Previously [soupsu.live](https://soupsu.live). This domain will expire in 2022.
+Previously [soupsu.live](https://soupsu.live).
 
 Currently used as a small hub for social media links/redirects.
 Looking to make it into a portfolio in the future.
