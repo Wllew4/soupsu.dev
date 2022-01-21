@@ -1,97 +1,97 @@
 <template>
-	<div id="error">
-		<p id="error-code">{{ error_code }} Error</p>
-		<p id="error-msg">{{ error_msg }}</p>
-	</div>
-	<div id="right">
-		<img id="dansen" src="/public/img/dansa.GIF">
-	</div>
+<div id="error">
+	<p id="error-code">{{ error_code }} Error</p>
+	<p id="error-msg">{{ error_msg }}</p>
+</div>
+<div id="right">
+	<img id="dansen" src="/public/img/dansa.GIF">
+</div>
 </template>
 
 <script lang="ts">
-	import { defineComponent } from "vue"
+import { defineComponent } from "vue"
 
-	require('./assets/img/dansa.GIF')
+require('./assets/img/dansa.GIF')
 
-	export default defineComponent({
-		props: {
-			code: Number,
-			message: String
-		},
-		data()
-		{
-			return {
-				error_code: this.code,
-				error_msg: this.message
-			}
+export default defineComponent({
+	props: {
+		code: Number,
+		message: String
+	},
+	data()
+	{
+		return {
+			error_code: this.code,
+			error_msg: this.message
 		}
-	})
+	}
+})
 </script>
 
 <style lang="scss">
-	@use './scss/util';
-	@use './scss/text';
+@use './scss/util';
+@use './scss/text';
 
-	body
+body
+{
+	@extend %spacebg;
+}
+
+#error
+{
+	position: absolute;
+	height: 100%;
+	width: 60%;
+	float: left;
+
+	color: white;
+	font-family: 'Noto Sans JP';
+	text-align: center;
+	-webkit-text-stroke: 1px;
+	-webkit-text-stroke-color: black;
+
+	z-index: 1;
+
+	*
 	{
-		@extend %spacebg;
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 
-	#error
+	#error-code
 	{
-		position: absolute;
-		height: 100%;
-		width: 60%;
-		float: left;
-
-		color: white;
-		font-family: 'Noto Sans JP';
-		text-align: center;
-		-webkit-text-stroke: 1px;
-		-webkit-text-stroke-color: black;
-
-		z-index: 1;
-
-		*
-		{
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-
-		#error-code
-		{
-			text-shadow: 4px 4px 5px #000000;
-			font-size: 10vh;
-		}
-		
-		#error-msg
-		{
-			text-shadow: 2px 2px 5px #000000;
-			font-size: 4vh;
-			background-color: #00000060;
-			border-radius: 30px;
-			margin-left: 1vw;
-			word-wrap: break-word;
-		}
+		text-shadow: 4px 4px 5px #000000;
+		font-size: 10vh;
 	}
-
-	#right
+	
+	#error-msg
 	{
-		display: flex;
-		position: relative;
-		height: 100%;
-		width: 60%;
-		float: right;
+		text-shadow: 2px 2px 5px #000000;
+		font-size: 4vh;
+		background-color: #00000060;
+		border-radius: 30px;
+		margin-left: 1vw;
+		word-wrap: break-word;
 	}
+}
 
-	#dansen
-	{
-		position: absolute;
-		max-height: 100vh;
-		max-width: 60vw;
-		bottom: 0;
-		right: 0;
+#right
+{
+	display: flex;
+	position: relative;
+	height: 100%;
+	width: 60%;
+	float: right;
+}
 
-		z-index: 0;
-	}
+#dansen
+{
+	position: absolute;
+	max-height: 100vh;
+	max-width: 60vw;
+	bottom: 0;
+	right: 0;
+
+	z-index: 0;
+}
 </style>
