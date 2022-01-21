@@ -24,29 +24,12 @@ class Social
 	}
 }
 
-const socials: Social[] =
-[
-	new Social(
-		'https://twitch.tv/soupsu',
-		'twitch.svg'
-	),
-	new Social(
-		'https://twitter.com/soupsu_',
-		'twitter.svg'
-	),
-	new Social(
-		'https://youtube.com/soupsu',
-		'youtube.svg'
-	),
-	new Social(
-		'https://discord.gg/BaJ4r9e',
-		'discord.svg'
-	),
-	new Social(
-		'https://github.com/Wllew4',
-		'github.svg'
-	)
-]
+import socials_json from '../data/socials.json'
+let socials: Social[] = []
+for(let i = 0; i < socials_json.length; i++)
+{
+	socials[i] = new Social(socials_json[i].url, socials_json[i].img)
+}
 
 for (let i = 0; i < socials.length; i++)
 {
