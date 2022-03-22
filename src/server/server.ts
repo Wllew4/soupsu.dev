@@ -2,7 +2,7 @@ import express from 'express'
 import path from 'path'
 import redirs from './redirects.json'
 
-const PORT = process.env.PORT || 443
+const PORT = 80
 const app = express()
 
 //	Serve static files
