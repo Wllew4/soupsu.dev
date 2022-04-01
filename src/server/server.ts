@@ -1,5 +1,7 @@
 import express from 'express'
 import path from 'path'
+import https from 'https'
+import fs from 'fs'
 import redirs from './redirects.json'
 
 const PORT = 80
@@ -37,7 +39,18 @@ app.get('*', (_,res)=>
 	res.status(404).sendFile(path.join(__dirname, '../client/index.html'))
 })
 
-app.listen(PORT, () =>
+// app.listen(PORT, () =>
+// {
+// 	console.log(`Listening on port ${PORT}`)
+// 	console.log(`Running at ${__dirname}`)
+// })
+
+const server = https.createServer({
+	key: fs.readFileSync('key'),
+	cert: fs.readFileSync('cert')
+}, app)
+
+server.listen(443, () =>
 {
 	console.log(`Listening on port ${PORT}`)
 	console.log(`Running at ${__dirname}`)
