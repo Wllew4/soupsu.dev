@@ -14,5 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: test build task
-      run: yarn install --frozen-lockfile && yarn build
+    - name: build webpack
+      run: cd client && yarn install --frozen-lockfile && yarn build
+    - name: build server
+      run: cd server && yarn install --frozen-lockfile && yarn build
