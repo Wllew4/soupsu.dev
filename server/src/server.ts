@@ -29,7 +29,7 @@ function main()
 	createRedirects(app, REDIRECTS_PATH)
 
 	// static files
-	app.use(express.static('../client/public'))
+	app.use(express.static(PUBLIC_PATH))
 
 	// Let client handle routing
 	app.get('*', (_,res) =>
