@@ -1,0 +1,16 @@
+//	tsconfig for server
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+		"baseUrl": ".",
+        "outDir": "bin",
+        "rootDir": "src",
+		"sourceMap": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true
+    }
+}
