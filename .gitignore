@@ -1,6 +1,5 @@
 bin/
-target/
-public/
+dist/
 node_modules/
 cert
 key

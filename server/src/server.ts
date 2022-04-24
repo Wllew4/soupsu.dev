@@ -29,7 +29,7 @@ function main()
 	createRedirects(app, REDIRECTS_PATH)
 
 	// static files
-	app.use(express.static(PUBLIC_PATH))
+	app.use(express.static('../client/public'))
 
 	// Let client handle routing
 	app.get('*', (_,res) =>
@@ -37,7 +37,7 @@ function main()
 		res.status(200).sendFile(path.join(process.cwd(), PUBLIC_PATH, '/dist/index.html'))
 	})
 
-	const PORT = production() ? 80 : DEV_PORT
+	const PORT = production() ? 443 : DEV_PORT
 	
 	protocol.createServer(config, app).listen(PORT, () =>
 	{
