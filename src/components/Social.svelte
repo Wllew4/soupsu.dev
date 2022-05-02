@@ -3,14 +3,14 @@
 </script>
 
 <a href={social.url} target=blank>
-	<img src={social.img} alt={social.alt} class="social-link">
+	<img src={social.img} alt={social.alt}>
 </a>
 
 <style lang="scss">
-	.social-link
+	img
 	{
 		border: 1px solid white;
 		border-radius: 50%;
-		width: 2.5rem;
+		width: 3.2rem;
 	}
 </style>

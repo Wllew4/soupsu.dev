@@ -3,14 +3,14 @@
 	export let url: string;
 </script>
 
-<a href={url} id="button">
+<a href={url}>
 	{title}
 </a>
 
 <style lang="scss">
 	@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
 
-	#button
+	a
 	{
 		// box
 		width: 10rem;
