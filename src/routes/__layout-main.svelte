@@ -33,7 +33,7 @@ let socials: ISocial[]	= _socials as ISocial[];
 <style lang="scss">
 	$background-image: '/img/background.jpg';
 
-	$box-width: 60%;
+	$box-width: 80%;
 	$box-max-width: 50rem;
 	$box-height: 25rem;
 	$box-radius: 25px;
@@ -45,10 +45,12 @@ let socials: ISocial[]	= _socials as ISocial[];
 	main
 	{
 		// layout
-		height: 100vh;
+		height: calc(100vh - 4rem);
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		padding: 2rem;
 
 		// background image
 		background-image: url($background-image);
