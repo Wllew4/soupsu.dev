@@ -1,4 +1,4 @@
-FROM node:18-alpine3.15
+FROM node:16
 
 # SHELL [ "bin/bash", "-c" ]
 # RUN apt update -y && apt install -y curl
