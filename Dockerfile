@@ -1,5 +1,7 @@
 FROM node:16-alpine
 
-RUN apk add make
 WORKDIR /soupsu.dev
-ENTRYPOINT make build_client && make build_server && make launch
+ENTRYPOINT \
+	cd /soupsu.dev/client && yarn install && yarn build && \
+	cd /soupsu.dev/server && yarn install && yarn build && \
+	yarn launch

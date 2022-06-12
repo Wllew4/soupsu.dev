@@ -1,19 +1,5 @@
 run:
-	docker run --rm -ti -v $(shell pwd):/soupsu.dev -p 127.0.0.1:8000:8000 -e NODE_ENV=dev soupsudev
-
-build_client:
-	cd client && \
-	yarn install && \
-	yarn build
-
-build_server:
-	cd server && \
-	yarn install && \
-	yarn build
-
-launch:
-	cd server && \
-	yarn launch
+	docker run --rm -d -v $(shell pwd):/soupsu.dev -p $(IP):443:443 --name soupsu.dev soupsu.dev:6.2
 
 docker:
-	docker build -t soupsudev .
+	docker build -t soupsu.dev:6.2 .
