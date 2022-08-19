@@ -1,4 +1,5 @@
-[
+
+const data = [
 	{
 		"img": "img/socials/twitter.svg",
 		"url": "https://twitter.com/soupsu_",
@@ -25,3 +26,7 @@
 		"alt": "Discord link"
 	}
 ]
+
+export function GET() {
+	return new Response(JSON.stringify(data))
+}

@@ -1,4 +1,5 @@
-[
+
+const data = [
 	{
 		"title": "Home",
 		"url": "/"
@@ -8,3 +9,7 @@
 		"url": "/projects"
 	}
 ]
+
+export function GET() {
+	return new Response(JSON.stringify(data))
+}
