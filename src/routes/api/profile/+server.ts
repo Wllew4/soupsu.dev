@@ -1,6 +1,5 @@
 import type { RequestHandler } from "@sveltejs/kit"
 
-
 const profiles: IProfile[] = [
 	{
 		img: '/img/profile/felix1.webp',
@@ -29,9 +28,7 @@ const profiles: IProfile[] = [
 	},
 ]
 
-export const GET: RequestHandler = async () => {
-
+export let GET: RequestHandler = () => {
 	let profile = profiles[Math.floor(Math.random() * profiles.length)]
-
 	return new Response(JSON.stringify(profile))
 }
