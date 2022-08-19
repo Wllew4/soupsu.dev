@@ -1,8 +1,16 @@
 <script lang="ts">
 	import Header from '$lib/home/Header.svelte';
 	import '$lib/styles/main.scss';
+	import { fly, slide } from 'svelte/transition';
+	import { onMount } from 'svelte';
+    import { navigating } from "$app/stores";
 
 	export let data: HomeData
+
+	let visible = false;
+	onMount(() => { visible = true; })
+
+	$: changed = $navigating?.from !== $navigating?.to;
 </script>
 
 <svelte:head>
@@ -10,17 +18,21 @@
 </svelte:head>
 
 <main>
-	<div id="main-block">
+	{#if visible}
+	<div id="main-block" in:fly="{{ y: 100, duration: 800 }}">
 		<Header data={ data }/>
 		<hr>
-		<slot />
+		{#key changed}
+			<div in:slide={{ duration: 500 }} out:slide={{ duration: 500 }}>
+				<slot />
+			</div>
+		{/key}
 	</div>
+	{/if}
 </main>
 
 <style lang="scss">
 
-	$box-width: 80%;
-	$box-height: 70%;
 	$box-radius: 25px;
 	$box-color: rgba($color: #0f0e20, $alpha: 0.7);
 
