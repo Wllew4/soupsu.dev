@@ -10,7 +10,7 @@
 			<p id="name">Soupsu</p>
 			<p id="artist-credit">🎨 by <a href="{ data.profile.artist_url }" target="_blank">{ data.profile.artist_name }</a></p>
 		</div>
-		<img id="icon" src={ data.profile.img } alt="My fursona, Felix"/>
+		<img id="icon" src={ data.profile.img } alt="My fursona, Felix" draggable="false"/>
 	</div>
 	<div id="tabs">
 		{#each data.navbar as tab}
@@ -47,7 +47,7 @@
 	}
 
 	#header #icon {
-		max-width: 15vw;
+		max-width: 12rem;
 		border-radius: 50%;
 	}
 

@@ -50,5 +50,6 @@
 
 	hr {
 		color: white;
+		margin-bottom: 1rem;
 	}
 </style>
