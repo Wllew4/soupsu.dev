@@ -1,45 +1,57 @@
 <script lang="ts">
-	import Header from '$lib/header/Header.svelte';
-	import '../app.css';
+	// import Header from '$lib/header/Header.svelte';
+	import '$lib/styles/main.scss';
 </script>
 
-<Header />
-
 <main>
-	<slot />
+	<div id="main-block">
+		<slot />
+	</div>
 </main>
 
-<footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer>
+<style lang="scss">
+	@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
 
-<style>
-	main {
-		flex: 1;
+	$box-width: 80%;
+	$box-height: 70%;
+	$box-radius: 25px;
+	$box-color: rgba($color: #0f0e20, $alpha: 0.7);
+
+	main
+	{
+		// layout
+		height: 100vh;
+		width: 100vw;
+		margin: 0;
 		display: flex;
 		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
 		align-items: center;
-		padding: 40px;
+		justify-content: center;
+
+		// background
+		background-color: aquamarine;
+		background-size: cover;
+		background-position: center;
 	}
 
-	footer a {
-		font-weight: bold;
-	}
+	#main-block
+	{
+		// layout
+		padding: 2rem;
+		// width: $box-width;
+		// height: $box-height;
+		width: 600px;
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
+		// style
+		border-radius: $box-radius;
+		background-color: $box-color;
+		backdrop-filter: blur(5px);
+		
+		// inner text
+		color: white;
+		font-size: 50px;
+		text-align: center;
+
+		transition: height 2s;
 	}
 </style>

@@ -1,3 +1,4 @@
+import type { RequestHandler } from "@sveltejs/kit"
 
 const data = [
 	{
@@ -27,6 +28,6 @@ const data = [
 	}
 ]
 
-export function GET() {
+export const GET: RequestHandler = async () => {
 	return new Response(JSON.stringify(data))
 }
