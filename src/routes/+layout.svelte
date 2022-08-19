@@ -1,16 +1,23 @@
 <script lang="ts">
-	// import Header from '$lib/header/Header.svelte';
+	import Header from '$lib/home/Header.svelte';
 	import '$lib/styles/main.scss';
+
+	export let data: HomeData
 </script>
+
+<svelte:head>
+	<title>Soupsu</title>
+</svelte:head>
 
 <main>
 	<div id="main-block">
+		<Header navbar={ data.navbar }/>
+		<hr>
 		<slot />
 	</div>
 </main>
 
 <style lang="scss">
-	@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
 
 	$box-width: 80%;
 	$box-height: 70%;
@@ -53,5 +60,9 @@
 		text-align: center;
 
 		transition: height 2s;
+	}
+
+	hr {
+		color: white;
 	}
 </style>
