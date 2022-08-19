@@ -11,7 +11,7 @@
 
 <main>
 	<div id="main-block">
-		<Header navbar={ data.navbar }/>
+		<Header data={ data }/>
 		<hr>
 		<slot />
 	</div>
