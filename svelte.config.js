@@ -1,6 +1,5 @@
 import adapter from '@sveltejs/adapter-node';
 import preprocess from 'svelte-preprocess';
-import fs from 'fs';
 import path from 'path';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -18,12 +17,12 @@ const config = {
 					$json:		path.resolve('./src/json'),
 				}
 			},
-			server: {
-				https: {
-					key: fs.readFileSync('key'),
-					cert: fs.readFileSync('cert')
-				}
-			}
+			// server: {
+			// 	https: {
+			// 		key: fs.readFileSync('key'),
+			// 		cert: fs.readFileSync('cert')
+			// 	}
+			// } 
 		}
 	}
 };

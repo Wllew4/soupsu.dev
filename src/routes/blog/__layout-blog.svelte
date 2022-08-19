@@ -1,2 +1,0 @@
-WOW blog
-<slot></slot>

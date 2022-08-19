@@ -3,15 +3,14 @@
 	export let url: string;
 </script>
 
-<a href={url}>
+<a href={url} draggable="false">
 	{title}
 </a>
 
 <style lang="scss">
 	@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
 
-	a
-	{
+	a {
 		// box
 		width: 10rem;
 		padding-bottom: 4px;
@@ -27,6 +26,12 @@
 
 		// text
 		font-family: 'Noto Sans';
-		font-size: 1.5rem;
+		font-size: 2rem;
+
+		&:hover {
+			background-color: rgba(15, 14, 32, 0.4);
+		}
+
+		transition-duration: 0.2s;
 	}
 </style>
