@@ -29,9 +29,7 @@
 		// layout
 		height: 100vh;
 		width: 100vw;
-		margin: 0;
 		display: flex;
-		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 
@@ -43,23 +41,11 @@
 
 	#main-block
 	{
-		// layout
-		padding: 2rem;
-		// width: $box-width;
-		// height: $box-height;
-		width: 600px;
-
 		// style
+		padding: 2rem;
 		border-radius: $box-radius;
 		background-color: $box-color;
 		backdrop-filter: blur(5px);
-		
-		// inner text
-		color: white;
-		font-size: 50px;
-		text-align: center;
-
-		transition: height 2s;
 	}
 
 	hr {

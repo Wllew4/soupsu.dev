@@ -1,14 +1,14 @@
 import type { RequestHandler } from "@sveltejs/kit"
 
-const data = [
+const data: INav[] = [
 	{
-		"title": "Home",
+		"title": "About",
 		"url": "/"
 	},
 	{
 		"title": "Projects",
 		"url": "/projects"
-	}
+	},
 ]
 
 export const GET: RequestHandler = async () => {
