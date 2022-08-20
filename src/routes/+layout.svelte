@@ -53,7 +53,7 @@
 
 	#main-block
 	{
-		// style
+		// width: 30rem;
 		padding: 2rem;
 		border-radius: $box-radius;
 		background-color: $box-color;

@@ -1,5 +1,4 @@
-interface INav
-{
+interface INav {
 	title: string,
 	url: string,
 }
