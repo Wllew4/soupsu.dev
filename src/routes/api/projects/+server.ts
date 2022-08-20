@@ -1,4 +1,5 @@
 import type { RequestHandler } from "@sveltejs/kit"
+import { VITE_GH_TOKEN } from "$env/static/private"
 
 const data: string[] = [
 	"Wllew4/obs-autoupload",
@@ -9,7 +10,7 @@ const data: string[] = [
 async function fetchProject(path: string): Promise<IProject> {
 	const repo_data = await (await fetch(`https://api.github.com/repos/${path}`, {
 		headers: {
-			Authorization: 'token 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'
+			Authorization: `token ${ VITE_GH_TOKEN }`
 		}
 	})).json()
 

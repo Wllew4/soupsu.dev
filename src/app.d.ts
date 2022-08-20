@@ -8,7 +8,9 @@ declare namespace App {
 
 	// interface Platform {}
 
-	// interface PrivateEnv {}
+	interface PrivateEnv {
+		VITE_GH_TOKEN: string
+	}
 
 	// interface PublicEnv {}
 }
