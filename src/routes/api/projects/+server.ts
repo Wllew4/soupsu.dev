@@ -1,20 +1,32 @@
 import type { RequestHandler } from "@sveltejs/kit"
 
-const data: IProject[] = [
-	{
-		"title": "obs-autoupload",
-		"description": "Automatically upload your VODs to YouTube when your stream ends."
-	},
-	{
-		"title": "node-ttv",
-		"description": "A Node.js wrapper for Twitch.tv's Helix API."
-	},
-	{
-		"title": "bofa_scraper",
-		"description": "Simple Python web-scraper to get personal transaction data from BofA account."
-	},
+const data: string[] = [
+	"Wllew4/obs-autoupload",
+	"Wllew4/node-ttv",
+	"Wllew4/bofa_scraper",
 ]
 
+async function fetchProject(path: string): Promise<IProject> {
+	const repo_data = await (await fetch(`https://api.github.com/repos/${path}`, {
+		headers: {
+			Authorization: 'token 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'
+		}
+	})).json()
+
+	const out: IProject = {
+		title: repo_data['name'],
+		description: repo_data['description'],
+		url: `https://github.com/${path}`,
+	}
+
+	return out
+}
+
 export const GET: RequestHandler = async () => {
-	return new Response(JSON.stringify(data))
+	let out: IProject[] = []
+
+	for (let i = 0; i < data.length; i++)
+		out.push(await fetchProject(data[i]))
+
+	return new Response(JSON.stringify(out))
 }

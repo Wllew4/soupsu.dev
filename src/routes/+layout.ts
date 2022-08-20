@@ -6,9 +6,12 @@ export const load: Load = async (e) => {
 	const socials: ISocial[] = await (await e.fetch('/api/socials')).json()
 	const profile: IProfile[] = await (await e.fetch('/api/profile')).json()
 
+	const pathname = e.url.pathname
+
 	return {
 		navbar,
 		socials,
-		profile
+		profile,
+		pathname
 	}
 }

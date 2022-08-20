@@ -5,23 +5,17 @@
 </script>
 
 <main>
-	<!-- <div id="projects">
+	<div id="projects">
 		{#each data.projects as project}
 			<Project project={project}/>
 		{/each}
-	</div> -->
+	</div>
 </main>
 
 <style lang="scss">
-	main {
-		display: block;
-		align-items: center;
-	}
-
 	#projects {
-		width: 100%;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		gap: 0.5rem;
 	}
 </style>

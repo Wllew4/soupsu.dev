@@ -3,15 +3,28 @@
 </script>
 
 <main>
-	<a href="https://github.com/Wllew4/obs-autoupload" target="_blank">
+	<a href={ project.url } target="_blank">
 		<div id="box">
-			<p>{ project.title }</p>
+			<p id="title">{ project.title }</p>
 			<p>{ project.description }</p>
 		</div>
 	</a>
 </main>
 
 <style lang="scss">
+
+	// match project's width to Header width
+	main {
+		display: flex;
+	}
+	main a {
+		flex-grow: 1;
+		width: 0;
+		// style
+		text-decoration: none;
+	}
+
+	// styling
 	#box {
 		background-color: rgba(15, 14, 32, 0.4);
 		padding: 1rem;
@@ -23,7 +36,7 @@
 		transition-duration: 0.2s;
 	}
 
-	a {
-		text-decoration: none;
+	#title {
+		text-decoration: underline;
 	}
 </style>

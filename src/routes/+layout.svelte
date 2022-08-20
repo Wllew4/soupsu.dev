@@ -3,14 +3,11 @@
 	import '$lib/styles/main.scss';
 	import { fly, slide } from 'svelte/transition';
 	import { onMount } from 'svelte';
-    import { navigating } from "$app/stores";
 
 	export let data: HomeData
 
 	let visible = false;
 	onMount(() => { visible = true; })
-
-	$: changed = $navigating?.from !== $navigating?.to;
 </script>
 
 <svelte:head>
@@ -22,7 +19,7 @@
 	<div id="main-block" in:fly="{{ y: 100, duration: 800 }}">
 		<Header data={ data }/>
 		<hr>
-		{#key changed}
+		{#key data.pathname}
 			<div in:slide={{ duration: 500 }} out:slide={{ duration: 500 }}>
 				<slot />
 			</div>
@@ -53,7 +50,7 @@
 
 	#main-block
 	{
-		// width: 30rem;
+		display: inline-block;
 		padding: 2rem;
 		border-radius: $box-radius;
 		background-color: $box-color;
