@@ -3,25 +3,29 @@
 	import '$lib/styles/main.scss';
 	import { fly, slide } from 'svelte/transition';
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores'
 
 	export let data: HomeData
 
 	let visible = false;
-	onMount(() => { visible = true; })
+	onMount(() => {
+		if(!$page.error)
+			visible = true;
+	})
 </script>
 
 <svelte:head>
 	<title>Soupsu</title>
 </svelte:head>
 
-<main>
+<main class="main">
 	{#if visible}
 	<div id="main-block" in:fly="{{ y: 100, duration: 800 }}">
 		<Header data={ data }/>
 		<hr>
 		{#key data.pathname}
 			<div in:slide={{ duration: 500 }} out:slide={{ duration: 500 }}>
-				<slot />
+				<slot/>
 			</div>
 		{/key}
 	</div>
