@@ -25,7 +25,7 @@
 
 		// hover animation
 		&:hover {
-			background-color: rgba(15, 14, 32, 0.4);
+			background-color: $box-color;
 		}
 		transition-duration: 0.2s;
 	}

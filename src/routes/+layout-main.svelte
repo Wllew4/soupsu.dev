@@ -18,7 +18,7 @@
 	<title>Soupsu</title>
 </svelte:head>
 
-<main class="main">
+<!-- <main class="main"> -->
 	{#if visible}
 	<div id="main-block" in:fly="{{ y: 100, duration: 800 }}">
 		<Header data={ data }/>
@@ -30,14 +30,13 @@
 		{/key}
 	</div>
 	{/if}
-</main>
+<!-- </main> -->
 
 <style lang="scss">
 
 	$box-radius: 25px;
-	$box-color: rgba($color: #0f0e20, $alpha: 0.7);
 
-	main
+	:global(body)
 	{
 		// layout
 		height: 100vh;

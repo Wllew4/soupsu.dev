@@ -26,12 +26,12 @@
 
 	// styling
 	#box {
-		background-color: rgba(15, 14, 32, 0.4);
+		background-color: $box-color;
 		padding: 1rem;
 		border-radius: 15px;
 
 		&:hover {
-			background-color: rgba(15, 14, 32, 0.8);
+			background-color: $box-color;
 		}
 		transition-duration: 0.2s;
 	}

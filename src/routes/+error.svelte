@@ -3,19 +3,18 @@
 	import { page } from '$app/stores'
 </script>
 
-<main>
-	<a href="https://twitter.com/SammyTheTanuki" target="_blank">🎨 by SammyTheTanuki</a>
-	<img src="/img/wtf.PNG" alt="Felix is mad and confused because of this error" draggable="false"/>
-	<p id="err">
-		Error {$page.status}
-		<br>
-		{$page.error.message}
-	</p>
-</main>
+<a href="https://twitter.com/SammyTheTanuki" target="_blank">🎨 by SammyTheTanuki</a>
+<img src="/img/wtf.PNG" alt="Felix is mad and confused because of this error" draggable="false"/>
+<p id="err">
+	Error {$page.status}
+	<br>
+	{$page.error.message}
+</p>
 
 <style lang="scss">
-	main {
+	:global(body) {		
 		background-color: black;
+		
 		width: 100vw;
 		height: 100vh;
 		display: flex;
