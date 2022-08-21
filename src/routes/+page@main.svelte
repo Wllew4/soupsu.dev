@@ -1,6 +1,11 @@
+<script lang="ts">
+	const birthday = new Date('02/03/2003');
+	const diff = new Date(Date.now() - birthday.getTime())
+	const age = diff.getUTCFullYear() - 1970;
+</script>
 
 <main>
-	19 <img id="bi-pride" src="/img/bi-pride.png" alt="bisexual pride heart" draggable="false"/> he/him
+	{ age } <img id="bi-pride" src="/img/bi-pride.png" alt="bisexual pride heart" draggable="false"/> he/him
 	<br>
 	Streamer & Programmer
 	<br>
