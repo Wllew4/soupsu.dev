@@ -3,8 +3,9 @@
 	import { page } from '$app/stores'
 </script>
 
-<a href="https://twitter.com/SammyTheTanuki" target="_blank">🎨 by SammyTheTanuki</a>
+<a href="/">🠔 Return Home</a>
 <img src="/img/wtf.PNG" alt="Felix is mad and confused because of this error" draggable="false"/>
+<a href="https://twitter.com/SammyTheTanuki" target="_blank">🎨 by SammyTheTanuki</a>
 <p id="err">
 	Error {$page.status}
 	<br>

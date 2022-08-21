@@ -3,14 +3,12 @@
 	import '$lib/styles/main.scss';
 	import { fly, slide } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import { page } from '$app/stores'
 
 	export let data: HomeData
 
 	let visible = false;
 	onMount(() => {
-		if(!$page.error)
-			visible = true;
+		visible = true;
 	})
 </script>
 

@@ -11,7 +11,8 @@ $bg-base: #0f0e20;
 
 %link-text {
 	&:hover {
-		color: black;
+		filter: brightness(75%);
 	}
 	transition-duration: 0.2s;
+	text-decoration: none;
 }

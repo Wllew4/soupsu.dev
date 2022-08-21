@@ -8,7 +8,11 @@
 	<div id="header">
 		<div>
 			<p id="name">Soupsu</p>
-			<p id="artist-credit">🎨 by <a href="{ data.profile.artist_url }" target="_blank">{ data.profile.artist_name }</a></p>
+			<p id="artist-credit">
+				<a href="{ data.profile.artist_url }" target="_blank">
+					🎨 by { data.profile.artist_name }
+				</a>
+			</p>
 		</div>
 		<img id="icon" src={ data.profile.img } alt="My fursona, Felix" draggable="false"/>
 	</div>
@@ -44,6 +48,10 @@
 	#header #artist-credit {
 		font-size: 1.2rem;
 		height: 0;
+	}
+
+	#header #artist-credit a {
+		@extend %link-text;
 	}
 
 	#header #icon {

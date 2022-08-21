@@ -9,7 +9,9 @@
 	<br>
 	Streamer & Programmer
 	<br>
-	📍<a href="https://www.google.com/maps/place/Boston,+MA/" target="_blank">Boston, MA</a>
+	<a href="https://www.google.com/maps/place/Boston,+MA/" target="_blank">
+		📍Boston, MA
+	</a>
 </main>
 
 <style lang="scss">
@@ -25,5 +27,9 @@
 		// adjust
 		position: relative;
 		top: -3px;
+	}
+
+	a {
+		@extend %link-text;
 	}
 </style>
