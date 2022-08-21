@@ -38,9 +38,6 @@
 		// layout
 		height: 100vh;
 		width: 100vw;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 
 		// background
 		background-color: aquamarine;

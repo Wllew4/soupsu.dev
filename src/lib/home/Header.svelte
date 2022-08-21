@@ -30,8 +30,7 @@
 	}
 
 	%flex-section {
-		display: flex;
-		align-items: center;
+		@extend %flex-hcenter;
 		margin-bottom: 1rem;
 	}
 

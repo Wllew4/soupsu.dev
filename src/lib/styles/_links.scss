@@ -1,0 +1,15 @@
+%link-box {
+	&:hover {
+		background-color: rgba($color: $bg-base, $alpha: 0.4);
+	}
+	transition-duration: 0.2s;
+	border-radius: 15px;
+}
+
+%link-text {
+	&:hover {
+		filter: brightness(75%);
+	}
+	transition-duration: 0.2s;
+	text-decoration: none;
+}
