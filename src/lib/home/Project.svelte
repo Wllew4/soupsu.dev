@@ -13,6 +13,8 @@
 
 <style lang="scss">
 
+	$bg: rgba($color: $bg-base, $alpha: 0.3);
+
 	// match project's width to Header width
 	main {
 		display: flex;
@@ -26,14 +28,9 @@
 
 	// styling
 	#box {
-		background-color: $box-color;
+		@extend %link-box;
+		background-color: $bg;
 		padding: 1rem;
-		border-radius: 15px;
-
-		&:hover {
-			background-color: $box-color;
-		}
-		transition-duration: 0.2s;
 	}
 
 	#title {

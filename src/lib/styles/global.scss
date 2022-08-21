@@ -1,2 +1,17 @@
 
-$box-color: rgba($color: #0f0e20, $alpha: 0.7);
+$bg-base: #0f0e20;
+
+%link-box {
+	&:hover {
+		background-color: rgba($color: $bg-base, $alpha: 0.4);
+	}
+	transition-duration: 0.2s;
+	border-radius: 15px;
+}
+
+%link-text {
+	&:hover {
+		color: black;
+	}
+	transition-duration: 0.2s;
+}

@@ -10,23 +10,13 @@
 <style lang="scss">
 
 	a {
-		// box
-		width: 10rem;
-		padding-bottom: 4px;
-
-		// border
+		@extend %link-box;
 		border-width: 1px;
 		border-style: solid;
-		border-radius: 12px;
 
-		// text
+		width: 10rem;
+		padding-bottom: 4px;
 		font-size: 2rem;
 		text-decoration: none;
-
-		// hover animation
-		&:hover {
-			background-color: $box-color;
-		}
-		transition-duration: 0.2s;
 	}
 </style>

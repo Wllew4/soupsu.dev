@@ -18,23 +18,22 @@
 	<title>Soupsu</title>
 </svelte:head>
 
-<!-- <main class="main"> -->
-	{#if visible}
-	<div id="main-block" in:fly="{{ y: 100, duration: 800 }}">
-		<Header data={ data }/>
-		<hr>
-		{#key data.pathname}
-			<div in:slide={{ duration: 500 }} out:slide={{ duration: 500 }}>
-				<slot/>
-			</div>
-		{/key}
-	</div>
-	{/if}
-<!-- </main> -->
+{#if visible}
+<div id="main-block" in:fly="{{ y: 100, duration: 800 }}">
+	<Header data={ data }/>
+	<hr>
+	{#key data.pathname}
+		<div in:slide={{ duration: 500 }} out:slide={{ duration: 500 }}>
+			<slot/>
+		</div>
+	{/key}
+</div>
+{/if}
 
 <style lang="scss">
-
-	$box-radius: 25px;
+	
+	$bg: rgba($color: $bg-base, $alpha: 0.65);
+	$radius: 25px;
 
 	:global(body)
 	{
@@ -55,8 +54,8 @@
 	{
 		display: inline-block;
 		padding: 2rem;
-		border-radius: $box-radius;
-		background-color: $box-color;
+		border-radius: $radius;
+		background-color: $bg;
 		backdrop-filter: blur(5px);
 	}
 
