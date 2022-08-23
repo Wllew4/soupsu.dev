@@ -1,4 +1,5 @@
 <script lang="ts">
+	import LinkFadeHover from "$lib/components/LinkFadeHover.svelte";
 	import NavButton from "./NavButton.svelte";
 
 	export let data: HomeData
@@ -9,9 +10,9 @@
 		<div>
 			<p id="name">Soupsu</p>
 			<p id="artist-credit">
-				<a href="{ data.profile.artist_url }" target="_blank">
+				<LinkFadeHover url={ data.profile.artist_url }>
 					🎨 by { data.profile.artist_name }
-				</a>
+				</LinkFadeHover>
 			</p>
 		</div>
 		<img id="icon" src={ data.profile.img } alt="My fursona, Felix" draggable="false"/>
@@ -49,12 +50,8 @@
 		height: 0;
 	}
 
-	#header #artist-credit a {
-		@extend %link-text;
-	}
-
 	#header #icon {
-		max-width: 12rem;
+		width: 12rem;
 		border-radius: 50%;
 	}
 

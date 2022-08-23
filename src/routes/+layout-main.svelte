@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Header from '$lib/home/Header.svelte';
+	import MatchSiblingWidth from '$lib/components/MatchSiblingWidth.svelte';
 	import '$lib/styles/main.scss';
 	import { fly, slide } from 'svelte/transition';
 	import { onMount } from 'svelte';
@@ -17,15 +18,18 @@
 </svelte:head>
 
 {#if visible}
-<div id="main-block" in:fly="{{ y: 100, duration: 800 }}">
-	<Header data={ data }/>
-	<hr>
-	{#key data.pathname}
-		<div in:slide={{ duration: 500 }} out:slide={{ duration: 500 }}>
-			<slot/>
-		</div>
-	{/key}
-</div>
+	<div id="main-block" in:fly="{{ y: 100, duration: 800 }}">
+		<Header data={ data }/>
+		<hr>
+		
+		<MatchSiblingWidth>
+		{#key data.pathname}
+			<div in:slide={{ duration: 500 }} out:slide={{ duration: 500 }}>
+				<slot/>
+			</div>
+		{/key}
+		</MatchSiblingWidth>
+	</div>
 {/if}
 
 <style lang="scss">
@@ -35,11 +39,8 @@
 
 	:global(body)
 	{
-		// layout
-		height: 100vh;
-		width: 100vw;
+		@extend %flex-centered-column;
 
-		// background
 		background-color: aquamarine;
 		background-size: cover;
 		background-position: center;
@@ -47,7 +48,6 @@
 
 	#main-block
 	{
-		display: inline-block;
 		padding: 2rem;
 		border-radius: $radius;
 		background-color: $bg;

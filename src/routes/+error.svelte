@@ -1,11 +1,18 @@
 <script lang="ts">
+	import LinkFadeHover from '$lib/components/LinkFadeHover.svelte'
 	import '$lib/styles/main.scss'
 	import { page } from '$app/stores'
 </script>
 
-<a href="/">🠔 Return Home</a>
-<img src="/img/wtf.PNG" alt="Felix is mad and confused because of this error" draggable="false"/>
-<a href="https://twitter.com/SammyTheTanuki" target="_blank">🎨 by SammyTheTanuki</a>
+<svelte:head>
+	<title>{ $page.status }: OOPSIE WOOPSIE!! Uwu We make a fucky wucky!! A wittle fucko boingo! The code monkeys at our headquarters are working VEWY HAWD to fix this!</title>
+</svelte:head>
+
+<LinkFadeHover url="/" target="_self">🠔 Return Home</LinkFadeHover>
+<div>
+	<img src="/img/wtf.PNG" alt="Felix is mad and confused because of this error" draggable="false"/>
+	<LinkFadeHover url="https://twitter.com/SammyTheTanuki">🎨 by SammyTheTanuki</LinkFadeHover>
+</div>
 <p id="err">
 	Error {$page.status}
 	<br>
@@ -13,19 +20,16 @@
 </p>
 
 <style lang="scss">
-	:global(body) {		
+	:global(body) {
+		@extend %flex-centered-column;
 		background-color: black;
-		
-		width: 100vw;
-		height: 100vh;
+		gap: 1.2rem;
+	}
+
+	div {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-	}
-
-	a {
-		font-size: 1rem;
 	}
 
 	img {

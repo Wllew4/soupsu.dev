@@ -4,13 +4,11 @@
 	export let data: ProjectData;
 </script>
 
-<main>
-	<div id="projects">
-		{#each data.projects as project}
-			<Project project={project}/>
-		{/each}
-	</div>
-</main>
+<div id="projects">
+	{#each data.projects as project}
+		<Project project={project}/>
+	{/each}
+</div>
 
 <style lang="scss">
 	#projects {

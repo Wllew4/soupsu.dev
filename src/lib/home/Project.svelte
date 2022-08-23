@@ -15,18 +15,10 @@
 
 	$bg: rgba($color: $bg-base, $alpha: 0.3);
 
-	// match project's width to Header width
-	main {
-		display: flex;
-	}
-	main a {
-		flex-grow: 1;
-		width: 0;
-		// style
+	a {
 		text-decoration: none;
 	}
 
-	// styling
 	#box {
 		@extend %link-box;
 		background-color: $bg;
