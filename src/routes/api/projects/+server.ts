@@ -13,7 +13,6 @@ async function fetchProject(path: string): Promise<IProject> {
 			Authorization: `token ${VITE_GH_TOKEN}`,
 		},
 	})
-	console.log(response.body)
 	const repo_data = await response.json()
 
 	const out: IProject = {
@@ -27,8 +26,6 @@ async function fetchProject(path: string): Promise<IProject> {
 
 export const GET: RequestHandler = async () => {
 	let out: IProject[] = []
-
 	for (let i = 0; i < data.length; i++) out.push(await fetchProject(data[i]))
-
 	return new Response(JSON.stringify(out))
 }

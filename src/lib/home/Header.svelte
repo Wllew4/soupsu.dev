@@ -36,12 +36,12 @@
 
 	%flex-section {
 		@extend %flex-hcenter;
-		margin-bottom: 1rem;
 	}
 
 	#header {
 		@extend %flex-section;
 		justify-content: center;
+		margin-bottom: 1rem;
 	}
 
 	#header #left {

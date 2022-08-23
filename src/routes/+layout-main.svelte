@@ -52,7 +52,12 @@
 	:global(body) {
 		@extend %flex-centered;
 
-		background-color: aquamarine;
+		// background-color: aquamarine;
+		background-image: linear-gradient(
+				rgba(0, 0, 0, 0.2),
+				rgba(0, 0, 0, 0.2)
+			),
+			url('/img/bg.png');
 		background-size: cover;
 		background-position: center;
 	}
@@ -60,7 +65,7 @@
 	#main-block {
 		background-color: $bg;
 		border-radius: $radius;
-		backdrop-filter: blur(5px);
+		backdrop-filter: blur(10px);
 		padding: 2rem;
 	}
 
