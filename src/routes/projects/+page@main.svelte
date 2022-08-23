@@ -12,8 +12,7 @@
 
 <style lang="scss">
 	#projects {
-		display: flex;
-		flex-direction: column;
+		@extend %flex-column;
 		gap: 0.5rem;
 	}
 </style>

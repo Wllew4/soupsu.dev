@@ -3,8 +3,18 @@
 	align-items: center;
 }
 
-%flex-centered-column {
-	@extend %flex-hcenter;
-	flex-direction: column;
+%flex-vcenter {
+	display: flex;
 	justify-content: center;
+}
+
+%flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+%flex-centered {
+	@extend %flex-hcenter;
+	@extend %flex-vcenter;
+	@extend %flex-column;
 }

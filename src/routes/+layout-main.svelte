@@ -39,7 +39,7 @@
 
 	:global(body)
 	{
-		@extend %flex-centered-column;
+		@extend %flex-centered;
 
 		background-color: aquamarine;
 		background-size: cover;
@@ -48,10 +48,10 @@
 
 	#main-block
 	{
-		padding: 2rem;
-		border-radius: $radius;
 		background-color: $bg;
+		border-radius: $radius;
 		backdrop-filter: blur(5px);
+		padding: 2rem;
 	}
 
 	hr {

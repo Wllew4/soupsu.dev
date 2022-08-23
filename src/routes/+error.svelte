@@ -21,15 +21,13 @@
 
 <style lang="scss">
 	:global(body) {
-		@extend %flex-centered-column;
+		@extend %flex-centered;
 		background-color: black;
 		gap: 1.2rem;
 	}
 
 	div {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		@extend %flex-centered;
 	}
 
 	img {
