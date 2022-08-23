@@ -1,10 +1,10 @@
-import type { Load } from "@sveltejs/kit"
+import type { Load } from '@sveltejs/kit'
 
 export const load: Load = async (e) => {
-
-	const projects: IProject[] = await (await e.fetch('/api/projects')).json()
+	const response = (await e.fetch('/api/projects'))
+	const projects: IProject[] = await response.json()
 
 	return {
-		projects
+		projects,
 	}
 }

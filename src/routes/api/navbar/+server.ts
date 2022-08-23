@@ -1,13 +1,13 @@
-import type { RequestHandler } from "@sveltejs/kit"
+import type { RequestHandler } from '@sveltejs/kit'
 
 const data: INav[] = [
 	{
-		"title": "About",
-		"url": "/"
+		title: 'About',
+		url: '/',
 	},
 	{
-		"title": "Projects",
-		"url": "/projects"
+		title: 'Projects',
+		url: '/projects',
 	},
 ]
 

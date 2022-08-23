@@ -1,4 +1,4 @@
-import type { RequestHandler } from "@sveltejs/kit"
+import type { RequestHandler } from '@sveltejs/kit'
 
 const profiles: IProfile[] = [
 	{

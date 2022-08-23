@@ -1,20 +1,18 @@
 name: Build
 
 on:
-  push:
-    branches: [ main, dev ]
-  pull_request:
-    branches: [ main, dev ]
+    push:
+        branches: [main, dev]
+    pull_request:
+        branches: [main, dev]
 
 jobs:
+    build:
+        runs-on: ubuntu-latest
 
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: build webpack
-      run: cd client && yarn install --frozen-lockfile && yarn build
-    - name: build server
-      run: cd server && yarn install --frozen-lockfile && yarn build
+        steps:
+            - uses: actions/checkout@v2
+            - name: build webpack
+              run: cd client && yarn install --frozen-lockfile && yarn build
+            - name: build server
+              run: cd server && yarn install --frozen-lockfile && yarn build
