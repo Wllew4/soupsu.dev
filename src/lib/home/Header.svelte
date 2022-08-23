@@ -7,7 +7,7 @@
 
 <main>
 	<div id="header">
-		<div>
+		<div id="left">
 			<p id="name">Soupsu</p>
 			<p id="artist-credit">
 				<LinkFadeHover url={data.profile.artist_url}>
@@ -44,13 +44,17 @@
 		justify-content: center;
 	}
 
+	#header #left {
+		margin-right: 1rem;
+	}
+
 	#header #name {
-		margin-right: 2rem;
 		font-size: 5rem;
 	}
 
 	#header #artist-credit {
 		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
 		height: 0;
 	}
 

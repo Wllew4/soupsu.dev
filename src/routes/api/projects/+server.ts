@@ -13,6 +13,7 @@ async function fetchProject(path: string): Promise<IProject> {
 			Authorization: `token ${VITE_GH_TOKEN}`,
 		},
 	})
+	console.log(response.body)
 	const repo_data = await response.json()
 
 	const out: IProject = {

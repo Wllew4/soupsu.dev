@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Header from '$lib/home/Header.svelte'
-	import MatchSiblingWidth from '$lib/components/MatchSiblingWidth.svelte'
+	import Social from '$lib/home/Social.svelte'
+	import MatchMaxSiblingWidth from '$lib/components/MatchMaxSiblingWidth.svelte'
 	import '$lib/styles/main.scss'
 	import { fly, slide } from 'svelte/transition'
 	import { onMount } from 'svelte'
@@ -20,15 +21,24 @@
 {#if visible}
 	<div id="main-block" in:fly={{ y: 100, duration: 800 }}>
 		<Header {data} />
+
 		<hr />
 
-		<MatchSiblingWidth>
+		<MatchMaxSiblingWidth>
 			{#key data.pathname}
 				<div in:slide={{ duration: 500 }} out:slide={{ duration: 500 }}>
 					<slot />
 				</div>
 			{/key}
-		</MatchSiblingWidth>
+		</MatchMaxSiblingWidth>
+
+		<hr />
+
+		<div id="socials">
+			{#each data.socials as social}
+				<Social {social} />
+			{/each}
+		</div>
 	</div>
 {/if}
 
@@ -56,6 +66,13 @@
 
 	hr {
 		color: white;
+		margin-top: 1rem;
 		margin-bottom: 1rem;
+	}
+
+	#socials {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
 	}
 </style>
