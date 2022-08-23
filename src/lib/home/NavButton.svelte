@@ -1,6 +1,6 @@
 <script lang="ts">
-	export let title: string;
-	export let url: string;
+	export let title: string
+	export let url: string
 </script>
 
 <a href={url} draggable="false">
@@ -8,7 +8,6 @@
 </a>
 
 <style lang="scss">
-
 	a {
 		@extend %link-box;
 		border-width: 1px;

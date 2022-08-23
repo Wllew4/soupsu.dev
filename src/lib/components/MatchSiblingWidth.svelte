@@ -1,6 +1,6 @@
 <main>
 	<div id="content">
-		<slot/>
+		<slot />
 	</div>
 </main>
 
@@ -8,7 +8,7 @@
 	main {
 		display: flex;
 	}
-	
+
 	#content {
 		flex-grow: 1;
 		width: 0;

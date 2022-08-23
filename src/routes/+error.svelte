@@ -5,17 +5,27 @@
 </script>
 
 <svelte:head>
-	<title>{ $page.status }: OOPSIE WOOPSIE!! Uwu We make a fucky wucky!! A wittle fucko boingo! The code monkeys at our headquarters are working VEWY HAWD to fix this!</title>
+	<title
+		>{$page.status}: OOPSIE WOOPSIE!! Uwu We make a fucky wucky!! A wittle
+		fucko boingo! The code monkeys at our headquarters are working VEWY HAWD
+		to fix this!</title
+	>
 </svelte:head>
 
 <LinkFadeHover url="/" target="_self">🠔 Return Home</LinkFadeHover>
 <div>
-	<img src="/img/wtf.PNG" alt="Felix is mad and confused because of this error" draggable="false"/>
-	<LinkFadeHover url="https://twitter.com/SammyTheTanuki">🎨 by SammyTheTanuki</LinkFadeHover>
+	<img
+		src="/img/wtf.PNG"
+		alt="Felix is mad and confused because of this error"
+		draggable="false"
+	/>
+	<LinkFadeHover url="https://twitter.com/SammyTheTanuki"
+		>🎨 by SammyTheTanuki</LinkFadeHover
+	>
 </div>
 <p id="err">
 	Error {$page.status}
-	<br>
+	<br />
 	{$page.error.message}
 </p>
 

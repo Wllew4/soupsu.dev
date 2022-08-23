@@ -1,11 +1,10 @@
 <script lang="ts">
 	export let url: string
-	export let target: string = "_blank"
-
+	export let target: string = '_blank'
 </script>
 
-<a href={ url } target={ target }>
-	<slot/>
+<a href={url} {target}>
+	<slot />
 </a>
 
 <style lang="scss">

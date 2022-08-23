@@ -1,15 +1,15 @@
 <script lang="ts">
-	import Header from '$lib/home/Header.svelte';
-	import MatchSiblingWidth from '$lib/components/MatchSiblingWidth.svelte';
-	import '$lib/styles/main.scss';
-	import { fly, slide } from 'svelte/transition';
-	import { onMount } from 'svelte';
+	import Header from '$lib/home/Header.svelte'
+	import MatchSiblingWidth from '$lib/components/MatchSiblingWidth.svelte'
+	import '$lib/styles/main.scss'
+	import { fly, slide } from 'svelte/transition'
+	import { onMount } from 'svelte'
 
 	export let data: HomeData
 
-	let visible = false;
+	let visible = false
 	onMount(() => {
-		visible = true;
+		visible = true
 	})
 </script>
 
@@ -18,27 +18,28 @@
 </svelte:head>
 
 {#if visible}
-	<div id="main-block" in:fly="{{ y: 100, duration: 800 }}">
-		<Header data={ data }/>
-		<hr>
-		
+	<div id="main-block" in:fly={{ y: 100, duration: 800 }}>
+		<Header {data} />
+		<hr />
+
 		<MatchSiblingWidth>
-		{#key data.pathname}
-			<div in:slide={{ duration: 500 }} out:slide={{ duration: 500 }}>
-				<slot/>
-			</div>
-		{/key}
+			{#key data.pathname}
+				<div in:slide={{ duration: 500 }} out:slide={{ duration: 500 }}>
+					<slot />
+				</div>
+			{/key}
 		</MatchSiblingWidth>
 	</div>
 {/if}
 
 <style lang="scss">
-	
-	$bg: rgba($color: $bg-base, $alpha: 0.65);
+	$bg: rgba(
+		$color: $bg-base,
+		$alpha: 0.65
+	);
 	$radius: 25px;
 
-	:global(body)
-	{
+	:global(body) {
 		@extend %flex-centered;
 
 		background-color: aquamarine;
@@ -46,8 +47,7 @@
 		background-position: center;
 	}
 
-	#main-block
-	{
+	#main-block {
 		background-color: $bg;
 		border-radius: $radius;
 		backdrop-filter: blur(5px);

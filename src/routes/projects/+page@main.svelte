@@ -1,12 +1,12 @@
 <script lang="ts">
 	import Project from '$lib/home/Project.svelte'
 
-	export let data: ProjectData;
+	export let data: ProjectData
 </script>
 
 <div id="projects">
 	{#each data.projects as project}
-		<Project project={project}/>
+		<Project {project} />
 	{/each}
 </div>
 
