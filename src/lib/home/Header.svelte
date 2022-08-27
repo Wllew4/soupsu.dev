@@ -40,6 +40,11 @@
 
 	#header {
 		@extend %flex-section;
+
+		@include mobile {
+			flex-direction: column;
+		}
+
 		justify-content: center;
 		margin-bottom: 1rem;
 	}
@@ -56,6 +61,9 @@
 		font-size: 1.2rem;
 		margin-bottom: 0.5rem;
 		height: 0;
+		@include mobile {
+			height: 100%;
+		}
 	}
 
 	#header #icon {
