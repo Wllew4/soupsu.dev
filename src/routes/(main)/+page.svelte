@@ -27,6 +27,9 @@
 	#description {
 		font-size: 2rem;
 		text-align: center;
+		@include mobile {
+			font-size: 1.5rem;
+		}
 	}
 
 	#bi-pride {

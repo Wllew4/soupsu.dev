@@ -75,6 +75,9 @@
 	#header #icon {
 		width: 12rem;
 		border-radius: 50%;
+		@include mobile {
+			width: 8rem;
+		}
 	}
 
 	#tabs {

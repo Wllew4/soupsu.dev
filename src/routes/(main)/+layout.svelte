@@ -19,27 +19,27 @@
 </svelte:head>
 
 {#if visible}
-	<div id="main-block" in:fly={{ y: 100, duration: 800 }}>
-		<Header {data} />
+<div id="main-block" in:fly={{ y: 100, duration: 800 }}>
+	<Header {data} />
 
-		<hr />
+	<hr />
 
-		<MatchMaxSiblingWidth>
-			{#key data.pathname}
-				<div in:slide={{ duration: 500 }} out:slide={{ duration: 500 }}>
-					<slot />
-				</div>
-			{/key}
-		</MatchMaxSiblingWidth>
+	<MatchMaxSiblingWidth>
+		{#key data.pathname}
+			<div in:slide={{ duration: 500 }} out:slide={{ duration: 500 }}>
+				<slot />
+			</div>
+		{/key}
+	</MatchMaxSiblingWidth>
 
-		<hr />
+	<hr />
 
-		<div id="socials">
-			{#each data.socials as social}
-				<Social {social} />
-			{/each}
-		</div>
+	<div id="socials">
+		{#each data.socials as social}
+			<Social {social} />
+		{/each}
 	</div>
+</div>
 {/if}
 
 <style lang="scss">
