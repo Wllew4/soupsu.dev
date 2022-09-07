@@ -12,5 +12,8 @@
 		border: 1px solid white;
 		border-radius: 50%;
 		width: 4rem;
+		@include mobile {
+			width: 3rem;
+		}
 	}
 </style>

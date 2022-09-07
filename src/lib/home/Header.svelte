@@ -51,10 +51,16 @@
 
 	#header #left {
 		margin-right: 1rem;
+		@include mobile {
+			margin: 0;
+		}
 	}
 
 	#header #name {
 		font-size: 5rem;
+		@include mobile {
+			font-size: 4rem;
+		}
 	}
 
 	#header #artist-credit {

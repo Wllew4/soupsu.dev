@@ -17,5 +17,9 @@
 		padding-bottom: 4px;
 		font-size: 2rem;
 		text-decoration: none;
+		@include mobile {
+			font-size: 2rem;
+			width: 8rem;
+		}
 	}
 </style>
