@@ -1,7 +1,7 @@
-FROM node:16-alpine
+FROM node:18-alpine
 
 WORKDIR /soupsu.dev
-ENTRYPOINT \
-	cd /soupsu.dev/client && yarn install && yarn build && \
-	cd /soupsu.dev/server && yarn install && yarn build && \
-	yarn launch
+COPY . /soupsu.dev
+RUN yarn install
+RUN yarn build
+ENTRYPOINT node build

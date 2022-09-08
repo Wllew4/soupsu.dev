@@ -1,5 +1,10 @@
-bin/
-dist/
-node_modules/
-cert
-key
+.DS_Store
+node_modules
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example
+.vercel
+.output
