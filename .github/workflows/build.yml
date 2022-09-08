@@ -12,8 +12,10 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2
-            - name: Create env file
-              run: "VITE_GH_TOKEN=${{ env.VITE_GH_TOKEN }}" \> .env
+            - name: Create .env
+              uses: SpicyPizza/create-envfile@v1.3
+              with:
+                  envkey_VITE_GH_TOKEN: ${{ secrets.VITE_GH_TOKEN }}
             - name: Install packages
               run: yarn install
             - name: Build site
