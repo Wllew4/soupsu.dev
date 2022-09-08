@@ -12,6 +12,8 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2
+            - name: Create env file
+              run: "VITE_GH_TOKEN=${{ env.VITE_GH_TOKEN }}" \> .env
             - name: Install packages
               run: yarn install
             - name: Build site
