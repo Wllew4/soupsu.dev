@@ -12,26 +12,29 @@
 	>
 </svelte:head>
 
-<LinkFadeHover url="/" target="_self">🠔 Return Home</LinkFadeHover>
-<div>
-	<img
-		src="/img/wtf.PNG"
-		alt="Felix is mad and confused because of this error"
-		draggable="false"
-	/>
-	<LinkFadeHover url="https://twitter.com/SammyTheTanuki"
-		>🎨 by SammyTheTanuki</LinkFadeHover
-	>
-</div>
-<p id="err">
-	Error {$page.status}
-	<br />
-	{$page.error.message}
-</p>
+<main>
+	<LinkFadeHover url="/" target="_self">🠔 Return Home</LinkFadeHover>
+	<div>
+		<img
+			src="/img/wtf.PNG"
+			alt="Felix is mad and confused because of this error"
+			draggable="false"
+		/>
+		<LinkFadeHover url="https://twitter.com/SammyTheTanuki"
+			>🎨 by SammyTheTanuki</LinkFadeHover
+		>
+	</div>
+	<p id="err">
+		Error {$page.status}
+		<br />
+		{$page.error.message}
+	</p>
+</main>
 
 <style lang="scss">
-	:global(body) {
+	main {
 		@extend %flex-centered;
+		height: 100%;
 		background-color: black;
 		gap: 1.2rem;
 	}

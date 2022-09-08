@@ -18,29 +18,36 @@
 	<title>Soupsu</title>
 </svelte:head>
 
-{#if visible}
-<div id="main-block" in:fly={{ y: 100, duration: 800 }}>
-	<Header {data} />
+<div id="outer-padding">
+	<div id="inner-wrapper">
+		{#if visible}
+			<div id="main-block" in:fly={{ y: 100, duration: 800 }}>
+				<Header {data} />
 
-	<hr />
+				<hr />
 
-	<MatchMaxSiblingWidth>
-		{#key data.pathname}
-			<div in:slide={{ duration: 500 }} out:slide={{ duration: 500 }}>
-				<slot />
+				<MatchMaxSiblingWidth>
+					{#key data.pathname}
+						<div
+							in:slide={{ duration: 500 }}
+							out:slide={{ duration: 500 }}
+						>
+							<slot />
+						</div>
+					{/key}
+				</MatchMaxSiblingWidth>
+
+				<hr />
+
+				<div id="socials">
+					{#each data.socials as social}
+						<Social {social} />
+					{/each}
+				</div>
 			</div>
-		{/key}
-	</MatchMaxSiblingWidth>
-
-	<hr />
-
-	<div id="socials">
-		{#each data.socials as social}
-			<Social {social} />
-		{/each}
+		{/if}
 	</div>
 </div>
-{/if}
 
 <style lang="scss">
 	$bg: rgba(
@@ -50,9 +57,6 @@
 	$radius: 25px;
 
 	:global(body) {
-		@extend %flex-centered;
-
-		// background-color: aquamarine;
 		background-image: linear-gradient(
 				rgba(0, 0, 0, 0.2),
 				rgba(0, 0, 0, 0.2)
@@ -60,6 +64,18 @@
 			url('/img/bg.png');
 		background-size: cover;
 		background-position: center;
+		background-attachment: fixed;
+	}
+
+	#outer-padding {
+		padding: 5vh;
+		height: 90vh;
+		overflow-x: hidden; // no idea why this works???
+	}
+
+	#inner-wrapper {
+		@extend %flex-centered;
+		min-height: 100%;
 	}
 
 	#main-block {
