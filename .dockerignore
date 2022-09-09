@@ -1,6 +1,10 @@
+.git
 .github
 .svelte-kit
 node_modules
 .gitignore
+.npmrc
+.prettierignore
+.prettierrc
 changelog.md
 README.md
