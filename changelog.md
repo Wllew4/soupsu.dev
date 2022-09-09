@@ -4,6 +4,15 @@ When I first made this website, I didn't know much about web development.
 Drastic improvements have been made as I've continued to update and maintain this site.
 It's been a good learning experience that has familiarized me with a range of technologies, techniques, and practices.
 
+## 7.0.1
+
+### Sept 2022
+
+[11b9bb1f6656ccdca0f37fa2ad773bc3d97125d2](https://github.com/Wllew4/soupsu.dev/commit/11b9bb1f6656ccdca0f37fa2ad773bc3d97125d2)
+
+-   Redesigned/rewritten from scratch in [SvelteKit](https://kit.svelte.dev)
+-   Now self-hosted on home server via Argo tunnel
+
 ## 6.2
 
 ### Jun 2022
