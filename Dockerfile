@@ -6,8 +6,8 @@ WORKDIR /soupsu.dev
 RUN yarn install
 RUN yarn build
 
-# Package
-FROM node:18-alpine
-COPY --from=0 /soupsu.dev /soupsu.dev
-WORKDIR /soupsu.dev
+# Clean up
+RUN rm -rf src
+RUN rm -rf static
+
 ENTRYPOINT node build
