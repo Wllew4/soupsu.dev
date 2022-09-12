@@ -61,7 +61,7 @@
 				rgba(0, 0, 0, 0.2),
 				rgba(0, 0, 0, 0.2)
 			),
-			url('/img/bg.png');
+			url('/img/bg.webp');
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
