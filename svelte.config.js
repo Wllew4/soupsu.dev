@@ -12,12 +12,7 @@ const config = {
 	}),
 
 	kit: {
-		adapter: adapter({ out: 'build' }),
-
-		// Override http methods in the Todo forms
-		methodOverride: {
-			allowed: ['PATCH', 'DELETE'],
-		},
+		adapter: adapter({ out: 'build' })
 	},
 }
 
