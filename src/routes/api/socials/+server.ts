@@ -3,17 +3,17 @@ import type { RequestHandler } from '@sveltejs/kit'
 const data = [
 	{
 		img: 'img/socials/twitter.svg',
-		url: 'https://twitter.com/soupsu_',
+		url: 'https://twitter.com/xravedogx',
 		alt: 'Twitter link',
 	},
 	{
 		img: 'img/socials/twitch.svg',
-		url: 'https://twitch.tv/soupsu',
+		url: 'https://twitch.tv/xravedogx',
 		alt: 'Twitch link',
 	},
 	{
 		img: 'img/socials/youtube.svg',
-		url: 'https://youtube.com/soupsu',
+		url: 'https://youtube.com/@xravedogx',
 		alt: 'YouTube link',
 	},
 	{
